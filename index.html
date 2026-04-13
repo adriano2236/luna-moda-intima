@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>LUNA - Desejo Íntimo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Faixa social -->
+  <div class="faixa-social">
+    <div class="icones">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/5554992361064" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+  <!-- Faixa social -->
+  <header class="faixa-topo">
+    <div class="faixa-esquerda">
+      <input type="text" placeholder="Buscar produtos..." class="pesquisa">
+    </div>
+
+    <div class="faixa-centro">
+      <h1 class="logo-loja">LUNA</h1>
+      <p class="subtitulo">DESEJO ÍNTIMO</p>
+    </div>
+
+    <div class="faixa-direita">
+      <button class="btn-carrinho" onclick="abrirCarrinho()">
+        <i class="fas fa-shopping-bag"></i>
+        <span id="contador-carrinho">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Modal da sacola -->
+  <div id="sacola" class="modal modal-sacola">
+    <div class="modal-conteudo">
+      <h2>Sua Sacola</h2>
+      <ul id="lista-produtos">
+        <li>Produto 1</li>
+        <li>Produto 2</li>
+      </ul>
+      <button onclick="fecharCarrinho()">Fechar</button>
+    </div>
+  </div>
+
+  <!-- Faixa de categorias -->
+  <nav class="faixa-categorias">
+    <ul>
+      <li><a href="#cuecas">Cuecas</a></li>
+      <li><a href="#blusas">Blusas</a></li>
+      <li><a href="#conjuntos">Conjuntos</a></li>
+      <li><a href="#calcinha">Calcinha</a></li>
+      <li><a href="#sutia">Sutiã</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Carrossel de ofertas -->
+    <section class="carrossel">
+      <div class="carrossel-container">
+        <div class="slide">
+          <!-- Em vez de "Oferta 1", descreve o que é -->
+          <img src="imagens/foto1.png" alt="Conjunto renda vermelha em promoção">
+        </div>
+        <div class="slide">
+          <img src="imagens/foto2.png" alt="Oferta 2">
+        </div>
+        <div class="slide">
+          <img src="imagens/foto3.png" alt="Oferta 3">
+        </div>
+        <div class="slide">
+          <img src="imagens/banner.png" alt="Oferta 4">
+        </div>
+      </div>
+
+      <!-- Botões de navegação -->
+      <button class="prev" onclick="mudarSlide(-1)" aria-label="Slide anterior">&#10094;</button>
+      <button class="next" onclick="mudarSlide(1)" aria-label="Próximo slide">&#10095;</button>
+
+      <!-- Indicadores -->
+      <div class="indicadores">
+        <span onclick="irParaSlide(0)" class="ativo"></span>
+        <span onclick="irParaSlide(1)"></span>
+        <span onclick="irParaSlide(2)"></span>
+        <span onclick="irParaSlide(3)"></span>
+      </div>
+    </section>
+
+    <!-- SEÇÃO DE CATEGORIAS -->
+    <section class="categorias-grid">
+
+      <!-- Card Categoria: Conjuntos -->
+      <a href="conjuntos.html" class="card-categoria-link">
+        <article class="card-categoria">
+          <div class="categoria-img">
+            <img src="imagens/categoria-conjuntos.jpg" alt="Conjuntos">
+          </div>
+          <h2>Conjuntos</h2>
+          <p>Ver coleção</p>
+        </article>
+      </a>
+
+      <!-- Card Categoria: Cuecas -->
+      <article class="card-categoria" onclick="abrirModalCategoria('modal-cuecas')">
+        <div class="categoria-img">
+          <img src="imagens/categoria-cuecas.jpg" alt="Cuecas">
+        </div>
+        <h2>Cuecas</h2>
+        <p>Ver coleção</p>
+      </article>
+
+      <!-- Card Categoria: Sutiãs -->
+      <article class="card-categoria" onclick="abrirModalCategoria('modal-sutias')">
+        <div class="categoria-img">
+          <img src="imagens/categoria-sutias.jpg" alt="Sutiãs">
+        </div>
+        <h2>Sutiãs</h2>
+        <p>Ver coleção</p>
+      </article>
+
+      <!-- Card Categoria: Calcinhas -->
+      <article class="card-categoria" onclick="abrirModalCategoria('modal-calcinhas')">
+        <div class="categoria-img">
+          <img src="imagens/categoria-calcinhas.jpg" alt="Calcinhas">
+        </div>
+        <h2>Calcinhas</h2>
+        <p>Ver coleção</p>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-conteudo">
+      <div class="rodape-coluna">
+        <h3>Moda Íntima</h3>
+        <ul>
+          <li><a href="#conjuntos">Conjuntos</a></li>
+          <li><a href="#sutias">Sutiãs</a></li>
+          <li><a href="#calcinhas">Calcinhas</a></li>
+          <li><a href="#cuecas">Cuecas</a></li>
+          <li><a href="#blusas">Blusas</a></li>
+        </ul>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Atendimento</h3>
+        <ul>
+          <li><a href="#">Fale Conosco</a></li>
+          <li><a href="#">Trocas e Devoluções</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+        </ul>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Redes Sociais</h3>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">WhatsApp</a></li>
+        </ul>
+      </div>
+
+      <div class="rodape-coluna newsletter">
+        <h3>Receba nossas novidades</h3>
+        <form>
+          <input type="email" placeholder="Digite seu e-mail" required>
+          <button type="submit">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="rodape-copy">
+      <p>&copy; 2026 Moda Íntima. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5599999999999" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
+  <!-- Modal Conjuntos (Nível 1) -->
+  <div id="modal-conjuntos" class="modal modal-categoria">
+    <div class="modal-conteudo">
+      <span class="fechar" onclick="fecharModal('modal-conjuntos')">&times;</span>
+      <h2>Conjuntos</h2>
+
+      <!-- Grid de produtos -->
+      <div class="grid-produtos-modal">
+
+        <!-- Card Produto 1 -->
+        <article class="card-produto-mini" onclick="abrirModalProduto('modal-produto-1')">
+          <img src="imagens/conjunto-renda.jpg" alt="Conjunto Renda">
+          <h3>Conjunto Renda</h3>
+          <p class="preco">R$ 69,98</p>
+          <span class="tag-variacoes">2 cores</span>
+        </article>
+
+        <!-- Card Produto 2 -->
+        <article class="card-produto-mini" onclick="abrirModalProduto('modal-produto-2')">
+          <img src="imagens/conjunto-rendado.jpg" alt="Conjunto Rendado">
+          <h3>Conjunto Rendado</h3>
+          <p class="preco">R$ 79,98</p>
+          <span class="tag-variacoes">2 cores</span>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Produto 1 -->
+  <div id="modal-produto-1" class="modal modal-produto">
+    <div class="modal-conteudo">
+      <span class="fechar" onclick="fecharModal('modal-produto-1')">&times;</span>
+
+      <div class="produto-detalhes">
+        <img src="imagens/conjunto-renda.jpg" alt="Conjunto Renda">
+
+        <div class="info-produto">
+          <h2>Conjunto Renda Calcinha Fio</h2>
+          <p class="preco">R$ 69,98</p>
+
+          <!-- Seleção de Cor -->
+          <div class="selecao-cor">
+            <label>Cor:</label>
+            <div class="opcoes-cor">
+              <button class="cor-btn ativa" onclick="selecionarCor(this)">
+                <span style="background: #ffb6c1;"></span> Rosa Claro
+              </button>
+              <button class="cor-btn" onclick="selecionarCor(this)">
+                <span style="background: #ff0066;"></span> Fúcsia
+              </button>
+            </div>
+          </div>
+
+          <!-- Seleção de Tamanho -->
+          <div class="selecao-tamanho">
+            <label>Tamanho:</label>
+            <div class="opcoes-tamanho">
+              <button onclick="selecionarTamanho(this)">P</button>
+              <button class="ativa" onclick="selecionarTamanho(this)">M</button>
+              <button onclick="selecionarTamanho(this)">G</button>
+            </div>
+          </div>
+
+          <button class="btn-adicionar" onclick="adicionarCarrinho('Conjunto Renda', 'rosa', 'M')">
+            Adicionar à Sacola
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Conjuntos - LUNA Desejo Íntimo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ============================================
+       MESMO HEADER DA PÁGINA PRINCIPAL
+       ============================================ -->
+
+    <!-- Faixa social -->
+    <div class="faixa-social">
+        <div class="icones">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/5554992361064" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="faixa-topo">
+        <div class="faixa-esquerda">
+            <input type="text" placeholder="Buscar produtos..." class="pesquisa">
+        </div>
+
+        <div class="faixa-centro">
+            <h1 class="logo-loja">LUNA</h1>
+            <p class="subtitulo">DESEJO ÍNTIMO</p>
+        </div>
+
+        <div class="faixa-direita">
+            <button class="btn-carrinho" onclick="abrirCarrinho()">
+                <i class="fas fa-shopping-bag"></i>
+                <span id="contador-carrinho">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Menu categorias -->
+    <nav class="faixa-categorias">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="conjuntos.html">Conjuntos</a></li>
+            <li><a href="cuecas.html">Cuecas</a></li>
+            <li><a href="sutias.html">Sutiãs</a></li>
+            <li><a href="calcinhas.html">Calcinhas</a></li>
+        </ul>
+    </nav>
+
+    <!-- ============================================
+       CONTEÚDO PRINCIPAL - PÁGINA DE CONJUNTOS
+       ============================================ -->
+
+    <main class="pagina-categoria">
+
+        <!-- Título da página -->
+        <section class="titulo-pagina">
+            <h1>Conjuntos</h1>
+            <p>16 modelos exclusivos para você</p>
+        </section>
+
+        <!-- Grid de produtos - 16 CONJUNTOS -->
+        <section class="grid-produtos-pagina">
+
+            <!-- PRODUTO 1 -->
+            <article class="card-produto-pagina" onclick="abrirModalProduto('modal-produto-1')">
+                <div class="produto-img-pagina">
+                    <span class="badge-promo">-20%</span>
+                    <img src="imagens/conjunto-1.jpg" alt="conjunto rendado com bojo e calcinha fio duplo">
+                </div>
+                <h3>Conjunto Rendado com Bojo e Calcinha Fio Duplo</h3>
+                <p class="preco">R$ 86,99</p>
+                <span class="tag-variacoes">5 cores</span>
+            </article>
+
+            <!-- PRODUTO 2 -->
+            <article class="card-produto-pagina" onclick="abrirModalProduto('modal-produto-2')">
+                <div class="produto-img-pagina">
+                    <img src="imagens/conjunto-2-pink.jpg" alt="conjunto fio todo rendado">
+                </div>
+                <h3>Conjunto Fio Todo Rendado</h3>
+                <p class="preco">R$ 69,90</p>
+                <span class="tag-variacoes">5 cores</span>
+            </article>
+
+            <!-- PRODUTO 3 -->
+            <article class="card-produto-pagina" onclick="abrirModalProduto('modal-produto-3')">
+                <div class="produto-img-pagina">
+                    <span class="badge-promo">Novo</span>
+                    <img src="imagens/conjunto-3-vermelho.jpg" alt="conjunto em renda cropped sem bojo e calesson">
+                </div>
+                <h3>Conjunto em Renda Cropped sem Bojo e Calesson</h3>
+                <p class="preco-antigo">R$ 59,90</p>
+                <p class="preco">R$ 49,90</p>
+                <span class="tag-variacoes">3 cores</span>
+            </article>
+
+            <!-- PRODUTO 4 -->
+            <article class="card-produto-pagina" onclick="abrirModalProduto('modal-produto-4')">
+                <div class="produto-img-pagina">
+                    <img src="imagens/conjunto-4-brnco.jpg" alt="conjunto em microfibra básico">
+                </div>
+                <h3>Conjunto em Microfibra básico</h3>
+                <p class="preco">R$ 75,90</p>
+                <span class="tag-variacoes">5 cores</span>
+            </article>
+
+            <!-- PRODUTO 5 -->
+            <article class="card-produto-pagina" onclick="abrirModalProduto('modal-produto-5')">
+                <div class="produto-img-pagina">
+                    <span class="badge-promo">-30%</span>
+                    <img src="imagens/conjunto-5-.jpg" alt="conjunto fio todo rendado">
+                </div>
+                <h3>Conjunto Fio Todo Rendado</h3>
+                <p class="preco-antigo">R$ 78,90</p>
+                <p class="preco">R$ 69,90</p>
+                <span class="tag-variacoes">5 cores</span>
+            </article>
+
+            <!-- PRODUTO 6 -->
+            <article class="card-produto-pagina" onclick="abrirModalProduto('modal-produto-6')">
+                <div class="produto-img-pagina">
+                    <img src="imagens/conjunto-6.jpg" alt="Conjunto Sport Confort">
+                </div>
+                <h3>Conjunto Sport Confort</h3>
+                <p class="preco">R$ 59,90</p>
+                <span class="tag-variacoes">3 cores</span>
+            </article>
+
+            <!-- PRODUTO 7 -->
+            <article class="card-produto-pagina" onclick="abrirModalProduto('modal-produto-7')">
+                <div class="produto-img-pagina">
+                    <span class="badge-promo">Mais Vendido</span>
+                    <img src="imagens/conjunto-7.jpg" alt="Conjunto Floral Delicado">
+                </div>
+                <h3>Conjunto Floral Delicado</h3>
+                <p class="preco">R$ 74,90</p>
+                <span class="tag-variacoes">2 cores</span>
+            </article>
+
+            <!-- PRODUTO 8 -->
+            <article class="card-produto-pagina" onclick="abrirModalProduto('modal-produto-8')">
+                <div class="produto-img-pagina">
+                    <img src="imagens/conjunto-8.jpg" alt="Conjunto Cetim Luxo">
+                </div>
+                <h3>Conjunto Cetim Luxo</h3>
+                <p class="preco-antigo">R$ 109,90</p>
+                <p class="preco">R$ 89,90</p>
+                <span class="tag-variacoes">3 cores</span>
+            </article>
+
+            <!-- PRODUTO 9 -->
+            <article class="card-produto-pagina" onclick="abrirModalProduto('modal-produto-9')">
+                <div class="produto-img-pagina">
+                    <img src="imagens/conjunto-9.jpg" alt="Conjunto Renda Fio">
+                </div>
+                <h3>Conjunto Renda Fio</h3>
+                <p class="preco">R$ 69,90</p>
+                <span class="tag-variacoes">4 cores</span>
+            </article>
+
+            <!-- PRODUTO 10 -->
+            <article class="card-produto-pagina" onclick="abrirModalProduto('modal-produto-10')">
+                <div class="produto-img-pagina">
+                    <span class="badge-promo">-15%</span>
+                    <img src="imagens/conjunto-10.jpg" alt="Conjunto Strass Glamour">
+                </div>
+                <h3>Conjunto Strass Glamour</h3>
+                <p class="preco-antigo">R$ 119,90</p>
+                <p class="preco">R$ 99,90</p>
+                <span class="tag-variacoes">2 cores</span>
+            </article>
+
+            <!-- PRODUTO 11 -->
+            <article class="card-produto-pagina" onclick="abrirModalProduto('modal-produto-11')">
+                <div class="produto-img-pagina">
+                    <img src="imagens/conjunto-11.jpg" alt="Conjunto Básico Renda">
+                </div>
+                <h3>Conjunto Básico Renda</h3>
+                <p class="preco">R$ 54,90</p>
+                <span class="tag-variacoes">6 cores</span>
+            </article>
+
+            <!-- PRODUTO 12 -->
+            <article class="card-produto-pagina" onclick="abrirModalProduto('modal-produto-12')">
+                <div class="produto-img-pagina">
+                    <span class="badge-promo">Edição Limitada</span>
+                    <img src="imagens/conjunto-12.jpg" alt="Conjunto Veludo Noite">
+                </div>
+                <h3>Conjunto Veludo Noite</h3>
+                <p class="preco">R$ 94,90</p>
+                <span class="tag-variacoes">2 cores</span>
+            </article>
+
+            <!-- PRODUTO 13 -->
+            <article class="card-produto-pagina" onclick="abrirModalProduto('modal-produto-13')">
+                <div class="produto-img-pagina">
+                    <img src="imagens/conjunto-13.jpg" alt="Conjunto Renda Tropical">
+                </div>
+                <h3>Conjunto Renda Tropical</h3>
+                <p class="preco-antigo">R$ 79,90</p>
+                <p class="preco">R$ 64,90</p>
+                <span class="tag-variacoes">3 cores</span>
+            </article>
+
+            <!-- PRODUTO 14 -->
+            <article class="card-produto-pagina" onclick="abrirModalProduto('modal-produto-14')">
+                <div class="produto-img-pagina">
+                    <img src="imagens/conjunto-14.jpg" alt="Conjunto Microfibra">
+                </div>
+                <h3>Conjunto Microfibra</h3>
+                <p class="preco">R$ 44,90</p>
+                <span class="tag-variacoes">5 cores</span>
+            </article>
+
+            <!-- PRODUTO 15 -->
+            <article class="card-produto-pagina" onclick="abrirModalProduto('modal-produto-15')">
+                <div class="produto-img-pagina">
+                    <span class="badge-promo">-25%</span>
+                    <img src="imagens/conjunto-15.jpg" alt="Conjunto Renda Coração">
+                </div>
+                <h3>Conjunto Renda Coração</h3>
+                <p class="preco-antigo">R$ 89,90</p>
+                <p class="preco">R$ 67,90</p>
+                <span class="tag-variacoes">3 cores</span>
+            </article>
+
+            <!-- PRODUTO 16 -->
+            <article class="card-produto-pagina" onclick="abrirModalProduto('modal-produto-16')">
+                <div class="produto-img-pagina">
+                    <span class="badge-promo">Exclusivo</span>
+                    <img src="imagens/conjunto-16.jpg" alt="Conjunto Premium Cetim">
+                </div>
+                <h3>Conjunto Premium Cetim</h3>
+                <p class="preco">R$ 109,90</p>
+                <span class="tag-variacoes">2 cores</span>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- ============================================
+       FOOTER (mesmo da página principal)
+       ============================================ -->
+
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <div class="rodape-coluna">
+                <h3>Moda Íntima</h3>
+                <ul>
+                    <li><a href="conjuntos.html">Conjuntos</a></li>
+                    <li><a href="sutias.html">Sutiãs</a></li>
+                    <li><a href="calcinhas.html">Calcinhas</a></li>
+                    <li><a href="cuecas.html">Cuecas</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape-coluna">
+                <h3>Atendimento</h3>
+                <ul>
+                    <li><a href="#">Fale Conosco</a></li>
+                    <li><a href="#">Trocas e Devoluções</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape-coluna">
+                <h3>Redes Sociais</h3>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">WhatsApp</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape-coluna newsletter">
+                <h3>Receba nossas novidades</h3>
+                <form>
+                    <input type="email" placeholder="Digite seu e-mail" required>
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="rodape-copy">
+            <p>&copy; 2026 Moda Íntima. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/5554992361064" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+    <!-- ============================================
+MODAIS (vamos adicionar depois)
+============================================ -->
+    <!-- ============================================
+     MODAL PRODUTO 1: Conjunto Renda Premium
+     ============================================ -->
+    <div id="modal-produto-1" class="modal modal-produto" style="display: none;">
+        <div class="modal-conteudo">
+
+            <!-- Botão fechar -->
+            <span class="fechar" onclick="fecharModal('modal-produto-1')">&times;</span>
+
+            <div class="produto-detalhes">
+                <!-- Imagem grande -->
+                <img id="img-produto-1" src="imagens/conjunto-1.jpg" alt="Conjunto Renda Premium">
+
+                <!-- Informações -->
+                <div class="info-produto">
+                    <h2>Conjunto Rendado com Bojo e Calcinha Fio Duplo</h2>
+                    <p class="preco">R$ 86,99</p>
+
+                    <!-- Seleção de Cor (OBRIGATÓRIO) -->
+                    <div class="selecao-cor">
+                        <label>Cor: <span class="obrigatorio">*</span></label>
+                        <div class="opcoes-cor" id="cor-produto-1">
+
+                            <button class="cor-btn"
+                                onclick="selecionarCor(this, 'produto-1'); trocarImagem('produto-1', 'preto')"
+                                data-cor="Preto">
+                                <span style="background: #000;"></span> Preto
+                            </button>
+
+                            <button class="cor-btn"
+                                onclick="selecionarCor(this, 'produto-1'); trocarImagem('produto-1', 'vermelho')"
+                                data-cor="Vermelho">
+                                <span style="background: #c00;"></span> Vermelho
+                            </button>
+
+                            <button class="cor-btn"
+                                onclick="selecionarCor(this, 'produto-1'); trocarImagem('produto-1', 'rosa-escuro')"
+                                data-cor="Rosa Escuro">
+                                <span style="background: #5f2c34;"></span> Rosa Escuro
+                            </button>
+
+                            <button class="cor-btn"
+                                onclick="selecionarCor(this, 'produto-1'); trocarImagem('produto-1', 'azul')"
+                                data-cor="Azul">
+                                <span style="background: rgb(157, 157, 246);"></span> Azul
+                            </button>
+
+                            <button class="cor-btn"
+                                onclick="selecionarCor(this, 'produto-1'); trocarImagem('produto-1', 'fucsia')"
+                                data-cor="Fucsia">
+                                <span style="background: #60064e;"></span> Fucsia
+                            </button>
+
+                            <!-- Seleção de Tamanho (OBRIGATÓRIO) -->
+                            <div class="selecao-tamanho">
+                                <label>Tamanho: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-tamanho" id="tamanho-produto-1">
+                                    <button onclick="selecionarTamanho(this, 'produto-1')" data-tamanho="M">M</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-1')" data-tamanho="G">G</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-1')" data-tamanho="GG">GG</button>
+                                </div>
+                                <span class="erro-tamanho" id="erro-tamanho-produto-1"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha um tamanho!
+                                </span>
+                            </div>
+
+                            <!-- Botão adicionar com validação -->
+                            <button class="btn-adicionar"
+                                onclick="adicionarCarrinho('produto-1', 'Conjunto Renda Premium', 69.90)">
+                                Adicionar à Sacola
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================
+    <!-- ============================================
+     MODAL PRODUTO 2: Conjunto Fio Todo Rendado
+     ============================================ -->
+            <div id="modal-produto-2" class="modal modal-produto" style="display: none;">
+                <div class="modal-conteudo">
+
+                    <!-- Botão fechar -->
+                    <span class="fechar" onclick="fecharModal('modal-produto-2')">&times;</span>
+
+                    <div class="produto-detalhes">
+                        <!-- Imagem grande -->
+                        <img id="img-produto-2" src="imagens/conjunto-2-pink.jpg" alt="Conjunto Fio Todo Rendado">
+
+                        <!-- Informações -->
+                        <div class="info-produto">
+                            <h2>Conjunto Fio Todo Rendado</h2>
+                            <p class="preco">R$ 69,90</p>
+
+                            <!-- Seleção de Cor (OBRIGATÓRIO) -->
+                            <div class="selecao-cor">
+                                <label>Cor: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-cor" id="cor-produto-2">
+
+                                    <button class="cor-btn ativa"
+                                        onclick="selecionarCor(this, 'produto-2'); trocarImagem('produto-2', 'pink')"
+                                        data-cor="Pink">
+                                        <span style="background: #ff69b4;"></span> Pink
+                                    </button>
+
+                                    <button class="cor-btn"
+                                        onclick="selecionarCor(this, 'produto-2'); trocarImagem('produto-2', 'branco')"
+                                        data-cor="Branco">
+                                        <span style="background: #fff; border: 1px solid #ddd;"></span> Branco
+                                    </button>
+
+                                    <button class="cor-btn"
+                                        onclick="selecionarCor(this, 'produto-2'); trocarImagem('produto-2', 'rosa-escuro')"
+                                        data-cor="Rosa Escuro">
+                                        <span style="background: #5f2c34;"></span> Rosa Escuro
+                                    </button>
+
+                                    <button class="cor-btn"
+                                        onclick="selecionarCor(this, 'produto-2'); trocarImagem('produto-2', 'vermelho')"
+                                        data-cor="Vermelho">
+                                        <span style="background: #c00;"></span> Vermelho
+                                    </button>
+
+                                    <button class="cor-btn"
+                                        onclick="selecionarCor(this, 'produto-2'); trocarImagem('produto-2', 'marinho')"
+                                        data-cor="Marinho">
+                                        <span style="background: #000080;"></span> Marinho
+                                    </button>
+
+                                </div>
+                                <span class="erro-cor" id="erro-cor-produto-2"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha uma cor!
+                                </span>
+                            </div>
+
+                            <!-- Seleção de Tamanho (OBRIGATÓRIO) -->
+                            <div class="selecao-tamanho">
+                                <label>Tamanho: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-tamanho" id="tamanho-produto-2">
+                                    <button onclick="selecionarTamanho(this, 'produto-2')" data-tamanho="P">P</button>
+                                    <button class="ativa" onclick="selecionarTamanho(this, 'produto-2')"
+                                        data-tamanho="M">M</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-2')" data-tamanho="G">G</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-2')" data-tamanho="GG">GG</button>
+                                </div>
+                                <span class="erro-tamanho" id="erro-tamanho-produto-2"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha um tamanho!
+                                </span>
+                            </div>
+
+                            <!-- Botão adicionar -->
+                            <button class="btn-adicionar"
+                                onclick="adicionarCarrinho('produto-2', 'Conjunto Fio Todo Rendado', 69.90)">
+                                Adicionar à Sacola
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================
+     MODAL PRODUTO 3: Conjunto Renda Premium
+     ============================================ -->
+            <div id="modal-produto-3" class="modal modal-produto" style="display: none;">
+                <div class="modal-conteudo">
+
+                    <!-- Botão fechar -->
+                    <span class="fechar" onclick="fecharModal('modal-produto-3 ')">&times;</span>
+
+                    <div class="produto-detalhes">
+                        <!-- Imagem grande -->
+                        <img src="imagens/conjunto-3.jpg" alt="Conjunto Renda Premium">
+
+                        <!-- Informações -->
+                        <div class="info-produto">
+                            <h2>Conjunto Renda Premium</h2>
+                            <p class="preco">R$ 69,90</p>
+
+                            <!-- Seleção de Cor (OBRIGATÓRIO) -->
+                            <div class="selecao-cor">
+                                <label>Cor: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-cor" id="cor-produto-3">
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-3')" data-cor="Preto">
+                                        <span style="background: #000;"></span> Preto
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-3')"
+                                        data-cor="Vermelho">
+                                        <span style="background: #c00;"></span> Vermelho
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-3')" data-cor="Rosa">
+                                        <span style="background: #ffb6c1;"></span> Rosa
+                                    </button>
+                                </div>
+                                <span class="erro-cor" id="erro-cor-produto-3"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha uma cor!
+                                </span>
+                            </div>
+
+                            <!-- Seleção de Tamanho (OBRIGATÓRIO) -->
+                            <div class="selecao-tamanho">
+                                <label>Tamanho: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-tamanho" id="tamanho-produto-3">
+                                    <button onclick="selecionarTamanho(this, 'produto-3')" data-tamanho="P">P</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-3')" data-tamanho="M">M</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-3')" data-tamanho="G">G</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-3')" data-tamanho="GG">GG</button>
+                                </div>
+                                <span class="erro-tamanho" id="erro-tamanho-produto-3"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha um tamanho!
+                                </span>
+                            </div>
+
+                            <!-- Botão adicionar com validação -->
+                            <button class="btn-adicionar"
+                                onclick="validarEAdicionar('produto-3', 'Conjunto Renda Premium', 69.90)">
+                                Adicionar à Sacola
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================
+     MODAL PRODUTO 4: Conjunto Renda Premium
+     ============================================ -->
+            <div id="modal-produto-4" class="modal modal-produto" style="display: none;">
+                <div class="modal-conteudo">
+
+                    <!-- Botão fechar -->
+                    <span class="fechar" onclick="fecharModal('modal-produto-4')">&times;</span>
+
+                    <div class="produto-detalhes">
+                        <!-- Imagem grande -->
+                        <img src="imagens/conjunto-4.jpg" alt="Conjunto Renda Premium">
+
+                        <!-- Informações -->
+                        <div class="info-produto">
+                            <h2>Conjunto Renda Premium</h2>
+                            <p class="preco">R$ 69,90</p>
+
+                            <!-- Seleção de Cor (OBRIGATÓRIO) -->
+                            <div class="selecao-cor">
+                                <label>Cor: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-cor" id="cor-produto-4">
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-4')" data-cor="Preto">
+                                        <span style="background: #000;"></span> Preto
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-4')"
+                                        data-cor="Vermelho">
+                                        <span style="background: #c00;"></span> Vermelho
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-4')" data-cor="Rosa">
+                                        <span style="background: #ffb6c1;"></span> Rosa
+                                    </button>
+                                </div>
+                                <span class="erro-cor" id="erro-cor-produto-4"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha uma cor!
+                                </span>
+                            </div>
+
+                            <!-- Seleção de Tamanho (OBRIGATÓRIO) -->
+                            <div class="selecao-tamanho">
+                                <label>Tamanho: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-tamanho" id="tamanho-produto-4">
+                                    <button onclick="selecionarTamanho(this, 'produto-4')" data-tamanho="P">P</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-4')" data-tamanho="M">M</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-4')" data-tamanho="G">G</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-4')" data-tamanho="GG">GG</button>
+                                </div>
+                                <span class="erro-tamanho" id="erro-tamanho-produto-4"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha um tamanho!
+                                </span>
+                            </div>
+
+                            <!-- Botão adicionar com validação -->
+                            <button class="btn-adicionar"
+                                onclick="validarEAdicionar('produto-4', 'Conjunto Renda Premium', 69.90)">
+                                Adicionar à Sacola
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================
+     MODAL PRODUTO 5: Conjunto Renda Premium
+     ============================================ -->
+            <div id="modal-produto-5" class="modal modal-produto" style="display: none;">
+                <div class="modal-conteudo">
+
+                    <!-- Botão fechar -->
+                    <span class="fechar" onclick="fecharModal('modal-produto-5')">&times;</span>
+
+                    <div class="produto-detalhes">
+                        <!-- Imagem grande -->
+                        <img src="imagens/conjunto-5.jpg" alt="Conjunto Renda Premium">
+
+                        <!-- Informações -->
+                        <div class="info-produto">
+                            <h2>Conjunto Renda Premium</h2>
+                            <p class="preco">R$ 69,90</p>
+
+                            <!-- Seleção de Cor (OBRIGATÓRIO) -->
+                            <div class="selecao-cor">
+                                <label>Cor: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-cor" id="cor-produto-5">
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-5')" data-cor="Preto">
+                                        <span style="background: #000;"></span> Preto
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-5')"
+                                        data-cor="Vermelho">
+                                        <span style="background: #c00;"></span> Vermelho
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-5')" data-cor="Rosa">
+                                        <span style="background: #ffb6c1;"></span> Rosa
+                                    </button>
+                                </div>
+                                <span class="erro-cor" id="erro-cor-produto-5"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha uma cor!
+                                </span>
+                            </div>
+
+                            <!-- Seleção de Tamanho (OBRIGATÓRIO) -->
+                            <div class="selecao-tamanho">
+                                <label>Tamanho: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-tamanho" id="tamanho-produto-5">
+                                    <button onclick="selecionarTamanho(this, 'produto-5')" data-tamanho="P">P</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-5')" data-tamanho="M">M</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-5')" data-tamanho="G">G</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-5')" data-tamanho="GG">GG</button>
+                                </div>
+                                <span class="erro-tamanho" id="erro-tamanho-produto-5"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha um tamanho!
+                                </span>
+                            </div>
+
+                            <!-- Botão adicionar com validação -->
+                            <button class="btn-adicionar"
+                                onclick="validarEAdicionar('produto-5', 'Conjunto Renda Premium', 69.90)">
+                                Adicionar à Sacola
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================
+     MODAL PRODUTO 5: Conjunto Renda Premium
+     ============================================ -->
+            <div id="modal-produto-5" class="modal modal-produto" style="display: none;">
+                <div class="modal-conteudo">
+
+                    <!-- Botão fechar -->
+                    <span class="fechar" onclick="fecharModal('modal-produto-5')">&times;</span>
+
+                    <div class="produto-detalhes">
+                        <!-- Imagem grande -->
+                        <img src="imagens/conjunto-5.jpg" alt="Conjunto Renda Premium">
+
+                        <!-- Informações -->
+                        <div class="info-produto">
+                            <h2>Conjunto Renda Premium</h2>
+                            <p class="preco">R$ 69,90</p>
+
+                            <!-- Seleção de Cor (OBRIGATÓRIO) -->
+                            <div class="selecao-cor">
+                                <label>Cor: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-cor" id="cor-produto-5">
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-5')" data-cor="Preto">
+                                        <span style="background: #000;"></span> Preto
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-5')"
+                                        data-cor="Vermelho">
+                                        <span style="background: #c00;"></span> Vermelho
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-5')" data-cor="Rosa">
+                                        <span style="background: #ffb6c1;"></span> Rosa
+                                    </button>
+                                </div>
+                                <span class="erro-cor" id="erro-cor-produto-5"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha uma cor!
+                                </span>
+                            </div>
+
+                            <!-- Seleção de Tamanho (OBRIGATÓRIO) -->
+                            <div class="selecao-tamanho">
+                                <label>Tamanho: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-tamanho" id="tamanho-produto-5">
+                                    <button onclick="selecionarTamanho(this, 'produto-5')" data-tamanho="P">P</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-5')" data-tamanho="M">M</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-5')" data-tamanho="G">G</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-5')" data-tamanho="GG">GG</button>
+                                </div>
+                                <span class="erro-tamanho" id="erro-tamanho-produto-5"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha um tamanho!
+                                </span>
+                            </div>
+
+                            <!-- Botão adicionar com validação -->
+                            <button class="btn-adicionar"
+                                onclick="validarEAdicionar('produto-5', 'Conjunto Renda Premium', 69.90)">
+                                Adicionar à Sacola
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================
+     MODAL PRODUTO 6: Conjunto Renda Premium
+     ============================================ -->
+            <div id="modal-produto-6" class="modal modal-produto" style="display: none;">
+                <div class="modal-conteudo">
+
+                    <!-- Botão fechar -->
+                    <span class="fechar" onclick="fecharModal('modal-produto-6')">&times;</span>
+
+                    <div class="produto-detalhes">
+                        <!-- Imagem grande -->
+                        <img src="imagens/conjunto-6.jpg" alt="Conjunto Renda Premium">
+
+                        <!-- Informações -->
+                        <div class="info-produto">
+                            <h2>Conjunto Renda Premium</h2>
+                            <p class="preco">R$ 69,90</p>
+
+                            <!-- Seleção de Cor (OBRIGATÓRIO) -->
+                            <div class="selecao-cor">
+                                <label>Cor: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-cor" id="cor-produto-6">
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-6')" data-cor="Preto">
+                                        <span style="background: #000;"></span> Preto
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-6')"
+                                        data-cor="Vermelho">
+                                        <span style="background: #c00;"></span> Vermelho
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-6')" data-cor="Rosa">
+                                        <span style="background: #ffb6c1;"></span> Rosa
+                                    </button>
+                                </div>
+                                <span class="erro-cor" id="erro-cor-produto-6"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha uma cor!
+                                </span>
+                            </div>
+
+                            <!-- Seleção de Tamanho (OBRIGATÓRIO) -->
+                            <div class="selecao-tamanho">
+                                <label>Tamanho: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-tamanho" id="tamanho-produto-6">
+                                    <button onclick="selecionarTamanho(this, 'produto-6')" data-tamanho="P">P</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-6')" data-tamanho="M">M</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-6')" data-tamanho="G">G</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-6')" data-tamanho="GG">GG</button>
+                                </div>
+                                <span class="erro-tamanho" id="erro-tamanho-produto-6"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha um tamanho!
+                                </span>
+                            </div>
+
+                            <!-- Botão adicionar com validação -->
+                            <button class="btn-adicionar"
+                                onclick="validarEAdicionar('produto-6', 'Conjunto Renda Premium', 69.90)">
+                                Adicionar à Sacola
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================
+     MODAL PRODUTO 7: Conjunto Renda Premium
+     ============================================ -->
+            <div id="modal-produto-7" class="modal modal-produto" style="display: none;">
+                <div class="modal-conteudo">
+
+                    <!-- Botão fechar -->
+                    <span class="fechar" onclick="fecharModal('modal-produto-7')">&times;</span>
+
+                    <div class="produto-detalhes">
+                        <!-- Imagem grande -->
+                        <img src="imagens/conjunto-7.jpg" alt="Conjunto Renda Premium">
+
+                        <!-- Informações -->
+                        <div class="info-produto">
+                            <h2>Conjunto Renda Premium</h2>
+                            <p class="preco">R$ 69,90</p>
+
+                            <!-- Seleção de Cor (OBRIGATÓRIO) -->
+                            <div class="selecao-cor">
+                                <label>Cor: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-cor" id="cor-produto-7">
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-7')" data-cor="Preto">
+                                        <span style="background: #000;"></span> Preto
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-7')"
+                                        data-cor="Vermelho">
+                                        <span style="background: #c00;"></span> Vermelho
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-7')" data-cor="Rosa">
+                                        <span style="background: #ffb6c1;"></span> Rosa
+                                    </button>
+                                </div>
+                                <span class="erro-cor" id="erro-cor-produto-7"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha uma cor!
+                                </span>
+                            </div>
+
+                            <!-- Seleção de Tamanho (OBRIGATÓRIO) -->
+                            <div class="selecao-tamanho">
+                                <label>Tamanho: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-tamanho" id="tamanho-produto-7">
+                                    <button onclick="selecionarTamanho(this, 'produto-7')" data-tamanho="P">P</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-7')" data-tamanho="M">M</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-7')" data-tamanho="G">G</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-7')" data-tamanho="GG">GG</button>
+                                </div>
+                                <span class="erro-tamanho" id="erro-tamanho-produto-7"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha um tamanho!
+                                </span>
+                            </div>
+
+                            <!-- Botão adicionar com validação -->
+                            <button class="btn-adicionar"
+                                onclick="validarEAdicionar('produto-7', 'Conjunto Renda Premium', 69.90)">
+                                Adicionar à Sacola
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================
+     MODAL PRODUTO 8: Conjunto Renda Premium
+     ============================================ -->
+            <div id="modal-produto-8" class="modal modal-produto" style="display: none;">
+                <div class="modal-conteudo">
+
+                    <!-- Botão fechar -->
+                    <span class="fechar" onclick="fecharModal('modal-produto-8')">&times;</span>
+
+                    <div class="produto-detalhes">
+                        <!-- Imagem grande -->
+                        <img src="imagens/conjunto-8.jpg" alt="Conjunto Renda Premium">
+
+                        <!-- Informações -->
+                        <div class="info-produto">
+                            <h2>Conjunto Renda Premium</h2>
+                            <p class="preco">R$ 69,90</p>
+
+                            <!-- Seleção de Cor (OBRIGATÓRIO) -->
+                            <div class="selecao-cor">
+                                <label>Cor: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-cor" id="cor-produto-8">
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-8')" data-cor="Preto">
+                                        <span style="background: #000;"></span> Preto
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-8')"
+                                        data-cor="Vermelho">
+                                        <span style="background: #c00;"></span> Vermelho
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-8')" data-cor="Rosa">
+                                        <span style="background: #ffb6c1;"></span> Rosa
+                                    </button>
+                                </div>
+                                <span class="erro-cor" id="erro-cor-produto-8"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha uma cor!
+                                </span>
+                            </div>
+
+                            <!-- Seleção de Tamanho (OBRIGATÓRIO) -->
+                            <div class="selecao-tamanho">
+                                <label>Tamanho: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-tamanho" id="tamanho-produto-8">
+                                    <button onclick="selecionarTamanho(this, 'produto-8')" data-tamanho="P">P</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-8')" data-tamanho="M">M</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-8')" data-tamanho="G">G</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-8')" data-tamanho="GG">GG</button>
+                                </div>
+                                <span class="erro-tamanho" id="erro-tamanho-produto-8"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha um tamanho!
+                                </span>
+                            </div>
+
+                            <!-- Botão adicionar com validação -->
+                            <button class="btn-adicionar"
+                                onclick="validarEAdicionar('produto-8', 'Conjunto Renda Premium', 69.90)">
+                                Adicionar à Sacola
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================
+     MODAL PRODUTO 9: Conjunto Renda Premium
+     ============================================ -->
+            <div id="modal-produto-9" class="modal modal-produto" style="display: none;">
+                <div class="modal-conteudo">
+
+                    <!-- Botão fechar -->
+                    <span class="fechar" onclick="fecharModal('modal-produto-9')">&times;</span>
+
+                    <div class="produto-detalhes">
+                        <!-- Imagem grande -->
+                        <img src="imagens/conjunto-9.jpg" alt="Conjunto Renda Premium">
+
+                        <!-- Informações -->
+                        <div class="info-produto">
+                            <h2>Conjunto Renda Premium</h2>
+                            <p class="preco">R$ 69,90</p>
+
+                            <!-- Seleção de Cor (OBRIGATÓRIO) -->
+                            <div class="selecao-cor">
+                                <label>Cor: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-cor" id="cor-produto-9">
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-9')" data-cor="Preto">
+                                        <span style="background: #000;"></span> Preto
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-9')"
+                                        data-cor="Vermelho">
+                                        <span style="background: #c00;"></span> Vermelho
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-9')" data-cor="Rosa">
+                                        <span style="background: #ffb6c1;"></span> Rosa
+                                    </button>
+                                </div>
+                                <span class="erro-cor" id="erro-cor-produto-9"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha uma cor!
+                                </span>
+                            </div>
+
+                            <!-- Seleção de Tamanho (OBRIGATÓRIO) -->
+                            <div class="selecao-tamanho">
+                                <label>Tamanho: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-tamanho" id="tamanho-produto-9">
+                                    <button onclick="selecionarTamanho(this, 'produto-9')" data-tamanho="P">P</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-9')" data-tamanho="M">M</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-9')" data-tamanho="G">G</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-9')" data-tamanho="GG">GG</button>
+                                </div>
+                                <span class="erro-tamanho" id="erro-tamanho-produto-9"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha um tamanho!
+                                </span>
+                            </div>
+
+                            <!-- Botão adicionar com validação -->
+                            <button class="btn-adicionar"
+                                onclick="validarEAdicionar('produto-9', 'Conjunto Renda Premium', 69.90)">
+                                Adicionar à Sacola
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================
+     MODAL PRODUTO 10: Conjunto Renda Premium
+     ============================================ -->
+            <div id="modal-produto-10" class="modal modal-produto" style="display: none;">
+                <div class="modal-conteudo">
+
+                    <!-- Botão fechar -->
+                    <span class="fechar" onclick="fecharModal('modal-produto-10')">&times;</span>
+
+                    <div class="produto-detalhes">
+                        <!-- Imagem grande -->
+                        <img src="imagens/conjunto-10.jpg" alt="Conjunto Renda Premium">
+
+                        <!-- Informações -->
+                        <div class="info-produto">
+                            <h2>Conjunto Renda Premium</h2>
+                            <p class="preco">R$ 69,90</p>
+
+                            <!-- Seleção de Cor (OBRIGATÓRIO) -->
+                            <div class="selecao-cor">
+                                <label>Cor: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-cor" id="cor-produto-10">
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-10')"
+                                        data-cor="Preto">
+                                        <span style="background: #000;"></span> Preto
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-10')"
+                                        data-cor="Vermelho">
+                                        <span style="background: #c00;"></span> Vermelho
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-10')" data-cor="Rosa">
+                                        <span style="background: #ffb6c1;"></span> Rosa
+                                    </button>
+                                </div>
+                                <span class="erro-cor" id="erro-cor-produto-10"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha uma cor!
+                                </span>
+                            </div>
+
+                            <!-- Seleção de Tamanho (OBRIGATÓRIO) -->
+                            <div class="selecao-tamanho">
+                                <label>Tamanho: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-tamanho" id="tamanho-produto-10">
+                                    <button onclick="selecionarTamanho(this, 'produto-10')" data-tamanho="P">P</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-10')" data-tamanho="M">M</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-10')" data-tamanho="G">G</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-10')"
+                                        data-tamanho="GG">GG</button>
+                                </div>
+                                <span class="erro-tamanho" id="erro-tamanho-produto-10"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha um tamanho!
+                                </span>
+                            </div>
+
+                            <!-- Botão adicionar com validação -->
+                            <button class="btn-adicionar"
+                                onclick="validarEAdicionar('produto-10', 'Conjunto Renda Premium', 69.90)">
+                                Adicionar à Sacola
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================
+     MODAL PRODUTO 11: Conjunto Renda Premium
+     ============================================ -->
+            <div id="modal-produto-11" class="modal modal-produto" style="display: none;">
+                <div class="modal-conteudo">
+
+                    <!-- Botão fechar -->
+                    <span class="fechar" onclick="fecharModal('modal-produto-11')">&times;</span>
+
+                    <div class="produto-detalhes">
+                        <!-- Imagem grande -->
+                        <img src="imagens/conjunto-11.jpg" alt="Conjunto Renda Premium">
+
+                        <!-- Informações -->
+                        <div class="info-produto">
+                            <h2>Conjunto Renda Premium</h2>
+                            <p class="preco">R$ 69,90</p>
+
+                            <!-- Seleção de Cor (OBRIGATÓRIO) -->
+                            <div class="selecao-cor">
+                                <label>Cor: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-cor" id="cor-produto-11">
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-11')"
+                                        data-cor="Preto">
+                                        <span style="background: #000;"></span> Preto
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-11')"
+                                        data-cor="Vermelho">
+                                        <span style="background: #c00;"></span> Vermelho
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-11')" data-cor="Rosa">
+                                        <span style="background: #ffb6c1;"></span> Rosa
+                                    </button>
+                                </div>
+                                <span class="erro-cor" id="erro-cor-produto-11"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha uma cor!
+                                </span>
+                            </div>
+
+                            <!-- Seleção de Tamanho (OBRIGATÓRIO) -->
+                            <div class="selecao-tamanho">
+                                <label>Tamanho: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-tamanho" id="tamanho-produto-11">
+                                    <button onclick="selecionarTamanho(this, 'produto-11')" data-tamanho="P">P</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-11')" data-tamanho="M">M</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-11')" data-tamanho="G">G</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-11')"
+                                        data-tamanho="GG">GG</button>
+                                </div>
+                                <span class="erro-tamanho" id="erro-tamanho-produto-11"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha um tamanho!
+                                </span>
+                            </div>
+
+                            <!-- Botão adicionar com validação -->
+                            <button class="btn-adicionar"
+                                onclick="validarEAdicionar('produto-11', 'Conjunto Renda Premium', 69.90)">
+                                Adicionar à Sacola
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================
+     MODAL PRODUTO 12: Conjunto Renda Premium
+     ============================================ -->
+            <div id="modal-produto-12" class="modal modal-produto" style="display: none;">
+                <div class="modal-conteudo">
+
+                    <!-- Botão fechar -->
+                    <span class="fechar" onclick="fecharModal('modal-produto-12')">&times;</span>
+
+                    <div class="produto-detalhes">
+                        <!-- Imagem grande -->
+                        <img src="imagens/conjunto-12.jpg" alt="Conjunto Renda Premium">
+
+                        <!-- Informações -->
+                        <div class="info-produto">
+                            <h2>Conjunto Renda Premium</h2>
+                            <p class="preco">R$ 69,90</p>
+
+                            <!-- Seleção de Cor (OBRIGATÓRIO) -->
+                            <div class="selecao-cor">
+                                <label>Cor: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-cor" id="cor-produto-12">
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-12')"
+                                        data-cor="Preto">
+                                        <span style="background: #000;"></span> Preto
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-12')"
+                                        data-cor="Vermelho">
+                                        <span style="background: #c00;"></span> Vermelho
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-12')" data-cor="Rosa">
+                                        <span style="background: #ffb6c1;"></span> Rosa
+                                    </button>
+                                </div>
+                                <span class="erro-cor" id="erro-cor-produto-12"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha uma cor!
+                                </span>
+                            </div>
+
+                            <!-- Seleção de Tamanho (OBRIGATÓRIO) -->
+                            <div class="selecao-tamanho">
+                                <label>Tamanho: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-tamanho" id="tamanho-produto-12">
+                                    <button onclick="selecionarTamanho(this, 'produto-12')" data-tamanho="P">P</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-12')" data-tamanho="M">M</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-12')" data-tamanho="G">G</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-12')"
+                                        data-tamanho="GG">GG</button>
+                                </div>
+                                <span class="erro-tamanho" id="erro-tamanho-produto-12"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha um tamanho!
+                                </span>
+                            </div>
+
+                            <!-- Botão adicionar com validação -->
+                            <button class="btn-adicionar"
+                                onclick="validarEAdicionar('produto-12', 'Conjunto Renda Premium', 69.90)">
+                                Adicionar à Sacola
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================
+     MODAL PRODUTO 13: Conjunto Renda Premium
+     ============================================ -->
+            <div id="modal-produto-13" class="modal modal-produto" style="display: none;">
+                <div class="modal-conteudo">
+
+                    <!-- Botão fechar -->
+                    <span class="fechar" onclick="fecharModal('modal-produto-13')">&times;</span>
+
+                    <div class="produto-detalhes">
+                        <!-- Imagem grande -->
+                        <img src="imagens/conjunto-13.jpg" alt="Conjunto Renda Premium">
+
+                        <!-- Informações -->
+                        <div class="info-produto">
+                            <h2>Conjunto Renda Premium</h2>
+                            <p class="preco">R$ 69,90</p>
+
+                            <!-- Seleção de Cor (OBRIGATÓRIO) -->
+                            <div class="selecao-cor">
+                                <label>Cor: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-cor" id="cor-produto-13">
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-13')"
+                                        data-cor="Preto">
+                                        <span style="background: #000;"></span> Preto
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-13')"
+                                        data-cor="Vermelho">
+                                        <span style="background: #c00;"></span> Vermelho
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-13')" data-cor="Rosa">
+                                        <span style="background: #ffb6c1;"></span> Rosa
+                                    </button>
+                                </div>
+                                <span class="erro-cor" id="erro-cor-produto-13"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha uma cor!
+                                </span>
+                            </div>
+
+                            <!-- Seleção de Tamanho (OBRIGATÓRIO) -->
+                            <div class="selecao-tamanho">
+                                <label>Tamanho: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-tamanho" id="tamanho-produto-13">
+                                    <button onclick="selecionarTamanho(this, 'produto-13')" data-tamanho="P">P</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-13')" data-tamanho="M">M</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-13')" data-tamanho="G">G</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-13')"
+                                        data-tamanho="GG">GG</button>
+                                </div>
+                                <span class="erro-tamanho" id="erro-tamanho-produto-13"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha um tamanho!
+                                </span>
+                            </div>
+
+                            <!-- Botão adicionar com validação -->
+                            <button class="btn-adicionar"
+                                onclick="validarEAdicionar('produto-13', 'Conjunto Renda Premium', 69.90)">
+                                Adicionar à Sacola
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================
+     MODAL PRODUTO 14: Conjunto Renda Premium
+     ============================================ -->
+            <div id="modal-produto-14" class="modal modal-produto" style="display: none;">
+                <div class="modal-conteudo">
+
+                    <!-- Botão fechar -->
+                    <span class="fechar" onclick="fecharModal('modal-produto-14')">&times;</span>
+
+                    <div class="produto-detalhes">
+                        <!-- Imagem grande -->
+                        <img src="imagens/conjunto-14.jpg" alt="Conjunto Renda Premium">
+
+                        <!-- Informações -->
+                        <div class="info-produto">
+                            <h2>Conjunto Renda Premium</h2>
+                            <p class="preco">R$ 69,90</p>
+
+                            <!-- Seleção de Cor (OBRIGATÓRIO) -->
+                            <div class="selecao-cor">
+                                <label>Cor: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-cor" id="cor-produto-14">
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-14')"
+                                        data-cor="Preto">
+                                        <span style="background: #000;"></span> Preto
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-14')"
+                                        data-cor="Vermelho">
+                                        <span style="background: #c00;"></span> Vermelho
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-14')" data-cor="Rosa">
+                                        <span style="background: #ffb6c1;"></span> Rosa
+                                    </button>
+                                </div>
+                                <span class="erro-cor" id="erro-cor-produto-14"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha uma cor!
+                                </span>
+                            </div>
+
+                            <!-- Seleção de Tamanho (OBRIGATÓRIO) -->
+                            <div class="selecao-tamanho">
+                                <label>Tamanho: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-tamanho" id="tamanho-produto-14">
+                                    <button onclick="selecionarTamanho(this, 'produto-14')" data-tamanho="P">P</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-14')" data-tamanho="M">M</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-14')" data-tamanho="G">G</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-14')"
+                                        data-tamanho="GG">GG</button>
+                                </div>
+                                <span class="erro-tamanho" id="erro-tamanho-produto-14"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha um tamanho!
+                                </span>
+                            </div>
+
+                            <!-- Botão adicionar com validação -->
+                            <button class="btn-adicionar"
+                                onclick="validarEAdicionar('produto-14', 'Conjunto Renda Premium', 69.90)">
+                                Adicionar à Sacola
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================
+     MODAL PRODUTO 15: Conjunto Renda Premium
+     ============================================ -->
+            <div id="modal-produto-15" class="modal modal-produto" style="display: none;">
+                <div class="modal-conteudo">
+
+                    <!-- Botão fechar -->
+                    <span class="fechar" onclick="fecharModal('modal-produto-15')">&times;</span>
+
+                    <div class="produto-detalhes">
+                        <!-- Imagem grande -->
+                        <img src="imagens/conjunto-15.jpg" alt="Conjunto Renda Premium">
+
+                        <!-- Informações -->
+                        <div class="info-produto">
+                            <h2>Conjunto Renda Premium</h2>
+                            <p class="preco">R$ 69,90</p>
+
+                            <!-- Seleção de Cor (OBRIGATÓRIO) -->
+                            <div class="selecao-cor">
+                                <label>Cor: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-cor" id="cor-produto-15">
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-15')"
+                                        data-cor="Preto">
+                                        <span style="background: #000;"></span> Preto
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-15')"
+                                        data-cor="Vermelho">
+                                        <span style="background: #c00;"></span> Vermelho
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-15')" data-cor="Rosa">
+                                        <span style="background: #ffb6c1;"></span> Rosa
+                                    </button>
+                                </div>
+                                <span class="erro-cor" id="erro-cor-produto-15"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha uma cor!
+                                </span>
+                            </div>
+
+                            <!-- Seleção de Tamanho (OBRIGATÓRIO) -->
+                            <div class="selecao-tamanho">
+                                <label>Tamanho: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-tamanho" id="tamanho-produto-15">
+                                    <button onclick="selecionarTamanho(this, 'produto-15')" data-tamanho="P">P</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-15')" data-tamanho="M">M</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-15')" data-tamanho="G">G</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-15')"
+                                        data-tamanho="GG">GG</button>
+                                </div>
+                                <span class="erro-tamanho" id="erro-tamanho-produto-15"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha um tamanho!
+                                </span>
+                            </div>
+
+                            <!-- Botão adicionar com validação -->
+                            <button class="btn-adicionar"
+                                onclick="validarEAdicionar('produto-15', 'Conjunto Renda Premium', 69.90)">
+                                Adicionar à Sacola
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================
+     MODAL PRODUTO 16: Conjunto Renda Premium
+     ============================================ -->
+            <div id="modal-produto-16" class="modal modal-produto" style="display: none;">
+                <div class="modal-conteudo">
+
+                    <!-- Botão fechar -->
+                    <span class="fechar" onclick="fecharModal('modal-produto-16')">&times;</span>
+
+                    <div class="produto-detalhes">
+                        <!-- Imagem grande -->
+                        <img src="imagens/conjunto-16.jpg" alt="Conjunto Renda Premium">
+
+                        <!-- Informações -->
+                        <div class="info-produto">
+                            <h2>Conjunto Renda Premium</h2>
+                            <p class="preco">R$ 69,90</p>
+
+                            <!-- Seleção de Cor (OBRIGATÓRIO) -->
+                            <div class="selecao-cor">
+                                <label>Cor: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-cor" id="cor-produto-16">
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-16')"
+                                        data-cor="Preto">
+                                        <span style="background: #000;"></span> Preto
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-16')"
+                                        data-cor="Vermelho">
+                                        <span style="background: #c00;"></span> Vermelho
+                                    </button>
+                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-16')" data-cor="Rosa">
+                                        <span style="background: #ffb6c1;"></span> Rosa
+                                    </button>
+                                </div>
+                                <span class="erro-cor" id="erro-cor-produto-16"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha uma cor!
+                                </span>
+                            </div>
+
+                            <!-- Seleção de Tamanho (OBRIGATÓRIO) -->
+                            <div class="selecao-tamanho">
+                                <label>Tamanho: <span class="obrigatorio">*</span></label>
+                                <div class="opcoes-tamanho" id="tamanho-produto-16">
+                                    <button onclick="selecionarTamanho(this, 'produto-16')" data-tamanho="P">P</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-16')" data-tamanho="M">M</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-16')" data-tamanho="G">G</button>
+                                    <button onclick="selecionarTamanho(this, 'produto-16')"
+                                        data-tamanho="GG">GG</button>
+                                </div>
+                                <span class="erro-tamanho" id="erro-tamanho-produto-16"
+                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                    Escolha um tamanho!
+                                </span>
+                            </div>
+
+                            <!-- Botão adicionar com validação -->
+                            <button class="btn-adicionar"
+                                onclick="validarEAdicionar('produto-16', 'Conjunto Renda Premium', 69.90)">
+                                Adicionar à Sacola
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Modal Sacola -->
+            <div id="sacola" class="modal modal-sacola">
+                <div class="modal-conteudo">
+                    <span class="fechar" onclick="fecharCarrinho()">&times;</span>
+                    <h2>Sua Sacola</h2>
+                    <ul id="lista-produtos"></ul>
+                    <button onclick="fecharCarrinho()">Fechar</button>
+                </div>
+            </div>
+
+            <!-- Modais de produtos - vamos adicionar depois -->
+
+            <!-- JavaScript -->
+            <script src="script.js"></script>
+
+</body>
+
+</html>
