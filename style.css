@@ -965,3 +965,17 @@ main {
 .card-produto-pagina {
   pointer-events: auto; /* Card recebe o clique */
 }
+
+.card-produto-pagina {
+  position: relative;
+  z-index: 1;
+}
+
+.card-produto-pagina img {
+  pointer-events: none; /* Deixa o clique passar para o card */
+  user-select: none;
+}
+
+.card-produto-pagina {
+  cursor: pointer;
+}
