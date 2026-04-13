@@ -70,10 +70,12 @@ function atualizarCarrossel() {
   });
 }
 
-// Avanço automático a cada 5 segundos
-setInterval(() => {
-  mudarSlide(1);
-}, 5000);
+// Só roda carrossel se ele existe na página
+if (document.querySelector('.carrossel')) {
+  setInterval(() => {
+    mudarSlide(1);
+  }, 5000);
+}
 
 // ============================================
 // MODAIS - CATEGORIAS E PRODUTOS
