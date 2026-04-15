@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <title>LUNA - Desejo Íntimo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src https://cdnjs.cloudflare.com; img-src 'self' https://upload.wikimedia.org data:;">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -14,9 +15,9 @@
   <!-- Faixa social -->
   <div class="faixa-social">
     <div class="icones">
-      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://wa.me/5554992361064" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/5554992361064" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
     </div>
   </div>
 
@@ -171,7 +172,7 @@
 
       <div class="rodape-coluna newsletter">
         <h3>Receba nossas novidades</h3>
-        <form>
+        <form onsubmit="event.preventDefault(); alert('E-mail cadastrado com sucesso!'); this.reset();">
           <input type="email" placeholder="Digite seu e-mail" required>
           <button type="submit">Cadastrar</button>
         </form>
@@ -183,7 +184,7 @@
     </div>
   </footer>
 
-  <a href="https://wa.me/5599999999999" class="whatsapp-float" target="_blank">
+  <a href="https://wa.me/5554992361064" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
   </a>
 
