@@ -567,25 +567,45 @@ MODAIS (vamos adicionar depois)
                             <h2>Conjunto Renda Premium</h2>
                             <p class="preco">R$ 69,90</p>
 
-                            <!-- Seleção de Cor (OBRIGATÓRIO) -->
+                            <!-- Seleção de Cor (OBRIGATÓRIO) - 5 CORES -->
                             <div class="selecao-cor">
                                 <label>Cor: <span class="obrigatorio">*</span></label>
                                 <div class="opcoes-cor" id="cor-produto-4">
-                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-4')" data-cor="Preto">
+        
+                                    <button class="cor-btn ativa" 
+                                        onclick="selecionarCor(this, 'produto-4'); trocarImagem('produto-4', 'branco')" 
+                                        data-cor="Branco">
+                                        <span style="background: #fff; border: 1px solid #ddd;"></span> Branco
+                                    </button>
+        
+                                    <button class="cor-btn" 
+                                        onclick="selecionarCor(this, 'produto-4'); trocarImagem('produto-4', 'marinho')" 
+                                        data-cor="Marinho">
+                                        <span style="background: #000080;"></span> Marinho
+                                    </button>
+        
+                                    <button class="cor-btn" 
+                                        onclick="selecionarCor(this, 'produto-4'); trocarImagem('produto-4', 'preto')" 
+                                        data-cor="Preto">
                                         <span style="background: #000;"></span> Preto
                                     </button>
-                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-4')"
-                                        data-cor="Vermelho">
-                                        <span style="background: #c00;"></span> Vermelho
+        
+                                    <button class="cor-btn" 
+                                        onclick="selecionarCor(this, 'produto-4'); trocarImagem('produto-4', 'rosa-escuro')" 
+                                        data-cor="Rosa Escuro">
+                                        <span style="background: #8b4513;"></span> Rosa Escuro
                                     </button>
-                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-4')" data-cor="Rosa">
+        
+                                    <button class="cor-btn" 
+                                        onclick="selecionarCor(this, 'produto-4'); trocarImagem('produto-4', 'rosa')" 
+                                        data-cor="Rosa">
                                         <span style="background: #ffb6c1;"></span> Rosa
                                     </button>
+        
+                                    <span class="erro-cor" id="erro-cor-produto-4" style="display:none; color:#e74c3c; font-size:12px;">
+                                        Escolha uma cor!
+                                    </span>
                                 </div>
-                                <span class="erro-cor" id="erro-cor-produto-4"
-                                    style="display:none; color:#e74c3c; font-size:12px;">
-                                    Escolha uma cor!
-                                </span>
                             </div>
 
                             <!-- Seleção de Tamanho (OBRIGATÓRIO) -->
