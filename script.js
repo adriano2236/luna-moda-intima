@@ -14,68 +14,146 @@ function fecharCarrinho() {
 // CARROSSEL INFINITO (loop suave)
 // ============================================
 
-let slideIndex = 0;
-const container = document.querySelector(".carrossel-container");
-const slides = document.querySelectorAll(".slide");
-const totalSlides = slides.length;
-const indicadores = document.querySelectorAll(".indicadores span");
+(function inicializarCarrossel() {
+  // Guard: só inicializa se os elementos do carrossel existirem na página
+  var carrosselSection = document.querySelector(".carrossel");
+  var container = document.querySelector(".carrossel-container");
+  var slides = document.querySelectorAll(".slide");
+  var indicadores = document.querySelectorAll(".indicadores span");
 
-// CLONA o primeiro slide e coloca no final (para loop infinito)
-const primeiroSlide = slides[0].cloneNode(true);
-container.appendChild(primeiroSlide);
-
-// Ajusta largura do container para caber o clone também
-container.style.width = `${(totalSlides + 1) * 100}%`;
-
-function mudarSlide(direcao) {
-  slideIndex += direcao;
-
-  // Aplica transição suave
-  container.style.transition = "transform 0.5s ease";
-  atualizarCarrossel();
-
-  // Se chegou no clone (último), volta pro primeiro instantaneamente
-  if (slideIndex > totalSlides - 1) {
-    setTimeout(() => {
-      container.style.transition = "none"; // remove transição
-      slideIndex = 0;
-      atualizarCarrossel();
-    }, 500); // espera a animação terminar
+  if (!carrosselSection || !container || !slides || slides.length === 0) {
+    // Página sem carrossel — expõe funções vazias para evitar erros no HTML
+    window.mudarSlide = function () {};
+    window.irParaSlide = function () {};
+    return;
   }
 
-  // Se voltou antes do primeiro, vai pro último
-  if (slideIndex < 0) {
-    container.style.transition = "none";
-    slideIndex = totalSlides - 1;
+  var slideIndex = 0;
+  var totalSlides = slides.length;
+  var emAnimacao = false; // trava de animação contra cliques rápidos
+  var autoPlayTimer = null;
+
+  // Clona o primeiro slide e coloca no final (para loop infinito)
+  try {
+    var primeiroSlide = slides[0].cloneNode(true);
+    container.appendChild(primeiroSlide);
+  } catch (e) {
+    console.warn("Carrossel: falha ao clonar slide.", e);
+    window.mudarSlide = function () {};
+    window.irParaSlide = function () {};
+    return;
+  }
+
+  // Ajusta largura do container para caber o clone também
+  container.style.width = (totalSlides + 1) * 100 + "%";
+
+  function atualizarCarrossel() {
+    container.style.transform =
+      "translateX(-" + slideIndex * (100 / (totalSlides + 1)) + "%)";
+
+    // Atualiza bolinhas (só até o total original, ignora o clone)
+    var indiceReal = slideIndex >= totalSlides ? 0 : slideIndex;
+    indicadores.forEach(function (dot, i) {
+      dot.classList.toggle("ativo", i === indiceReal);
+    });
+  }
+
+  function mudarSlide(direcao) {
+    // Trava de animação: ignora cliques durante transição
+    if (emAnimacao) return;
+    emAnimacao = true;
+
+    slideIndex += direcao;
+
+    // Aplica transição suave
+    container.style.transition = "transform 0.5s ease";
     atualizarCarrossel();
-    setTimeout(() => {
-      container.style.transition = "transform 0.5s ease";
-    }, 50);
+
+    // Se chegou no clone (último), volta pro primeiro instantaneamente
+    if (slideIndex > totalSlides - 1) {
+      setTimeout(function () {
+        container.style.transition = "none";
+        slideIndex = 0;
+        atualizarCarrossel();
+        emAnimacao = false;
+      }, 500);
+    }
+    // Se voltou antes do primeiro, vai pro último
+    else if (slideIndex < 0) {
+      container.style.transition = "none";
+      slideIndex = totalSlides - 1;
+      atualizarCarrossel();
+      setTimeout(function () {
+        container.style.transition = "transform 0.5s ease";
+        emAnimacao = false;
+      }, 50);
+    } else {
+      setTimeout(function () {
+        emAnimacao = false;
+      }, 500);
+    }
+
+    // Reinicia auto-play ao navegar manualmente
+    reiniciarAutoPlay();
   }
-}
 
-function irParaSlide(n) {
-  slideIndex = n;
-  container.style.transition = "transform 0.5s ease";
-  atualizarCarrossel();
-}
+  function irParaSlide(n) {
+    // Trava de animação e validação de limites
+    if (emAnimacao) return;
+    if (n < 0 || n >= totalSlides) return;
+    if (n === slideIndex) return;
 
-function atualizarCarrossel() {
-  container.style.transform = `translateX(-${slideIndex * (100 / (totalSlides + 1))}%)`;
+    emAnimacao = true;
+    slideIndex = n;
+    container.style.transition = "transform 0.5s ease";
+    atualizarCarrossel();
 
-  // Atualiza bolinhas (só até o total original, ignora o clone)
-  const indiceReal = slideIndex >= totalSlides ? 0 : slideIndex;
-  indicadores.forEach((dot, i) => {
-    dot.classList.toggle("ativo", i === indiceReal);
+    setTimeout(function () {
+      emAnimacao = false;
+    }, 500);
+
+    // Reinicia auto-play ao navegar manualmente
+    reiniciarAutoPlay();
+  }
+
+  // --- Gerenciamento do auto-play ---
+
+  function iniciarAutoPlay() {
+    pararAutoPlay();
+    autoPlayTimer = setInterval(function () {
+      mudarSlide(1);
+    }, 5000);
+  }
+
+  function pararAutoPlay() {
+    if (autoPlayTimer) {
+      clearInterval(autoPlayTimer);
+      autoPlayTimer = null;
+    }
+  }
+
+  function reiniciarAutoPlay() {
+    pararAutoPlay();
+    iniciarAutoPlay();
+  }
+
+  // Pausa auto-play quando a aba não está visível
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) {
+      pararAutoPlay();
+    } else {
+      reiniciarAutoPlay();
+    }
   });
-}
 
-// Só roda carrossel se ele existe na página
-if (document.querySelector('.carrossel')) {
-  setInterval(() => {
-    mudarSlide(1);
-  }, 5000);
-}
+  // Inicializa posição e inicia auto-play
+  atualizarCarrossel();
+  iniciarAutoPlay();
+
+  // Expõe funções globalmente para os onclick do HTML
+  window.mudarSlide = mudarSlide;
+  window.irParaSlide = irParaSlide;
+})();
 
 // ============================================
 // MODAIS - CATEGORIAS E PRODUTOS
