@@ -65,14 +65,15 @@ if (document.querySelector('.carrossel')) {
 // TROCAR IMAGEM DO PRODUTO PELA COR
 // ============================================
 
-function trocarImagem(idImagem, nomeBase, cor) {
-  const img = document.getElementById(idImagem);
+function trocarImagem(produtoId, cor) {
+  const img = document.getElementById(`img-${produtoId}`);
 
   if (img) {
     img.style.opacity = "0.3";
 
     setTimeout(() => {
-      img.src = `imagens/${nomeBase}-${cor}.jpg`;
+      const numero = produtoId.replace("produto-", "");
+      img.src = `imagens/calcinha-${numero}-${cor}.jpg`;
       img.style.opacity = "1";
     }, 150);
   }
