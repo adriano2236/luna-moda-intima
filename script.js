@@ -65,18 +65,14 @@ if (document.querySelector('.carrossel')) {
 // TROCAR IMAGEM DO PRODUTO PELA COR
 // ============================================
 
-function trocarImagem(produtoId, cor) {
-  const img = document.getElementById(`img-${produtoId}`);
+function trocarImagem(idImagem, nomeBase, cor) {
+  const img = document.getElementById(idImagem);
 
   if (img) {
     img.style.opacity = "0.3";
 
     setTimeout(() => {
-      // Mude de 'produto-1' para 'conjunto-1'
-      // Use 'conjunto' + número do produto
-      const numeroProduto = produtoId.replace("produto-", "conjunto-");
-      img.src = `imagens/${numeroProduto}-${cor}.jpg`;
-
+      img.src = `imagens/${nomeBase}-${cor}.jpg`;
       img.style.opacity = "1";
     }, 150);
   }
