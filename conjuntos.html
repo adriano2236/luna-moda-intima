@@ -105,7 +105,7 @@
             <!-- PRODUTO 4 -->
             <article class="card-produto-pagina" onclick="abrirModalProduto('modal-produto-4')">
                 <div class="produto-img-pagina">
-                    <img src="imagens/conjunto-4-brnco.jpg" alt="conjunto em microfibra básico">
+                    <img src="imagens/conjunto-4-branco.jpg" alt="conjunto em microfibra básico">
                 </div>
                 <h3>Conjunto em Microfibra básico</h3>
                 <p class="preco">R$ 75,90</p>
@@ -115,13 +115,12 @@
             <!-- PRODUTO 5 -->
             <article class="card-produto-pagina" onclick="abrirModalProduto('modal-produto-5')">
                 <div class="produto-img-pagina">
-                    <span class="badge-promo">-30%</span>
-                    <img src="imagens/conjunto-5-.jpg" alt="conjunto fio todo rendado">
+                    <img src="imagens/conjunto-5-.jpg" alt="conjunto c/bojo rendado calcinha fio duplo com laços">
                 </div>
-                <h3>Conjunto Fio Todo Rendado</h3>
-                <p class="preco-antigo">R$ 78,90</p>
-                <p class="preco">R$ 69,90</p>
-                <span class="tag-variacoes">5 cores</span>
+                <h3>Conjunto C/Bojo Rendado Calcinha Fio duplo com laços</h3>
+                <p class="preco-antigo">R$ 99,90</p>
+                <p class="preco">R$ 89,90</p>
+                <span class="tag-variacoes">4 cores</span>
             </article>
 
             <!-- PRODUTO 6 -->
@@ -313,7 +312,7 @@ MODAIS (vamos adicionar depois)
 
             <div class="produto-detalhes">
                 <!-- Imagem grande -->
-                <img id="img-produto-1" src="imagens/conjunto-1.jpg" alt="Conjunto Renda Premium">
+                <img id="img-produto-1" src="imagens/conjunto-1.jpg" alt="conjunto rendado com bojo e calcinha fio duplo">
 
                 <!-- Informações -->
                 <div class="info-produto">
@@ -378,7 +377,7 @@ MODAIS (vamos adicionar depois)
 
                     <!-- Botão adicionar com validação -->
                     <button class="btn-adicionar"
-                        onclick="adicionarCarrinho('produto-1', 'Conjunto Rendado com Bojo e Calcinha Fio Duplo', 86.99)">
+                        onclick="adicionarCarrinho('produto-1', 'conjunto rendado com bojo e calcinha fio duplo', 86,99)">
                         Adicionar à Sacola
                     </button>
 
@@ -398,7 +397,7 @@ MODAIS (vamos adicionar depois)
 
                     <div class="produto-detalhes">
                         <!-- Imagem grande -->
-                        <img id="img-produto-2" src="imagens/conjunto-2-pink.jpg" alt="Conjunto Fio Todo Rendado">
+                        <img id="img-produto-2" src="imagens/conjunto-2-pink.jpg" alt="conjunto fio todo rendado">
 
                         <!-- Informações -->
                         <div class="info-produto">
@@ -451,9 +450,6 @@ MODAIS (vamos adicionar depois)
                             <div class="selecao-tamanho">
                                 <label>Tamanho: <span class="obrigatorio">*</span></label>
                                 <div class="opcoes-tamanho" id="tamanho-produto-2">
-                                    <button onclick="selecionarTamanho(this, 'produto-2')" data-tamanho="P">P</button>
-                                    <button class="ativa" onclick="selecionarTamanho(this, 'produto-2')"
-                                        data-tamanho="M">M</button>
                                     <button onclick="selecionarTamanho(this, 'produto-2')" data-tamanho="G">G</button>
                                     <button onclick="selecionarTamanho(this, 'produto-2')" data-tamanho="GG">GG</button>
                                 </div>
@@ -485,39 +481,46 @@ MODAIS (vamos adicionar depois)
 
                     <div class="produto-detalhes">
                         <!-- Imagem grande -->
-                        <img src="imagens/conjunto-3.jpg" alt="Conjunto Renda Premium">
+                        <img id="img-produto-3" src="imagens/conjunto-3-vermelho.jpg" alt="conjunto em renda cropped sem bojo e calesson">
 
                         <!-- Informações -->
                         <div class="info-produto">
-                            <h2>Conjunto Renda Premium</h2>
-                            <p class="preco">R$ 69,90</p>
+                            <h2>Conjunto em Renda Cropped sem Bojo e Calesson</h2>
+                            <p class="preco">R$ 49,90</p>
 
-                            <!-- Seleção de Cor (OBRIGATÓRIO) -->
+                            <!-- Seleção de Cor (OBRIGATÓRIO) - 3 CORES -->
                             <div class="selecao-cor">
                                 <label>Cor: <span class="obrigatorio">*</span></label>
                                 <div class="opcoes-cor" id="cor-produto-3">
-                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-3')" data-cor="Preto">
-                                        <span style="background: #000;"></span> Preto
+        
+                                    <button class="cor-btn ativa" 
+                                        onclick="selecionarCor(this, 'produto-3'); trocarImagem('produto-3', 'berge')" 
+                                        data-cor="Berge">
+                                        <span style="background: #d4b896;"></span> Berge
                                     </button>
-                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-3')"
+        
+                                    <button class="cor-btn" 
+                                        onclick="selecionarCor(this, 'produto-3'); trocarImagem('produto-3', 'roxo')" 
+                                        data-cor="Roxo">
+                                        <span style="background: #6a1b9a;"></span> Roxo
+                                    </button>
+        
+                                    <button class="cor-btn" 
+                                        onclick="selecionarCor(this, 'produto-3'); trocarImagem('produto-3', 'vermelho')" 
                                         data-cor="Vermelho">
                                         <span style="background: #c00;"></span> Vermelho
                                     </button>
-                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-3')" data-cor="Rosa">
-                                        <span style="background: #ffb6c1;"></span> Rosa
-                                    </button>
+        
                                 </div>
-                                <span class="erro-cor" id="erro-cor-produto-3"
-                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                <span class="erro-cor" id="erro-cor-produto-3" style="display:none; color:#e74c3c; font-size:12px;">
                                     Escolha uma cor!
                                 </span>
-                            </div>
+                            </div>    
 
                             <!-- Seleção de Tamanho (OBRIGATÓRIO) -->
                             <div class="selecao-tamanho">
                                 <label>Tamanho: <span class="obrigatorio">*</span></label>
                                 <div class="opcoes-tamanho" id="tamanho-produto-3">
-                                    <button onclick="selecionarTamanho(this, 'produto-3')" data-tamanho="P">P</button>
                                     <button onclick="selecionarTamanho(this, 'produto-3')" data-tamanho="M">M</button>
                                     <button onclick="selecionarTamanho(this, 'produto-3')" data-tamanho="G">G</button>
                                     <button onclick="selecionarTamanho(this, 'produto-3')" data-tamanho="GG">GG</button>
@@ -530,7 +533,7 @@ MODAIS (vamos adicionar depois)
 
                             <!-- Botão adicionar com validação -->
                             <button class="btn-adicionar"
-                                onclick="validarEAdicionar('produto-3', 'Conjunto Renda Premium', 69.90)">
+                                onclick="validarEAdicionar('produto-3', 'conjunto em renda cropped sem bojo e calesson', 49,90)">
                                 Adicionar à Sacola
                             </button>
 
@@ -540,7 +543,7 @@ MODAIS (vamos adicionar depois)
             </div>
 
             <!-- ============================================
-     MODAL PRODUTO 4: Conjunto Renda Premium
+     MODAL PRODUTO 4: conjunto em microfibra básico
      ============================================ -->
             <div id="modal-produto-4" class="modal modal-produto" style="display: none;">
                 <div class="modal-conteudo">
@@ -550,30 +553,50 @@ MODAIS (vamos adicionar depois)
 
                     <div class="produto-detalhes">
                         <!-- Imagem grande -->
-                        <img src="imagens/conjunto-4.jpg" alt="Conjunto Renda Premium">
+                        <img id="img-produto-4" src="imagens/conjunto-4-branco.jpg" alt="conjunto em microfibra básico">
 
                         <!-- Informações -->
                         <div class="info-produto">
-                            <h2>Conjunto Renda Premium</h2>
+                            <h2>Conjunto em Microfibra Básico</h2>
                             <p class="preco">R$ 69,90</p>
 
-                            <!-- Seleção de Cor (OBRIGATÓRIO) -->
+                            <!-- Seleção de Cor (OBRIGATÓRIO) - 5 CORES -->
                             <div class="selecao-cor">
                                 <label>Cor: <span class="obrigatorio">*</span></label>
                                 <div class="opcoes-cor" id="cor-produto-4">
-                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-4')" data-cor="Preto">
+        
+                                    <button class="cor-btn ativa" 
+                                        onclick="selecionarCor(this, 'produto-4'); trocarImagem('produto-4', 'branco')" 
+                                        data-cor="Branco">
+                                        <span style="background: #fff; border: 1px solid #ddd;"></span> Branco
+                                    </button>
+        
+                                    <button class="cor-btn" 
+                                        onclick="selecionarCor(this, 'produto-4'); trocarImagem('produto-4', 'marinho')" 
+                                        data-cor="Marinho">
+                                        <span style="background: #000080;"></span> Marinho
+                                    </button>
+        
+                                    <button class="cor-btn" 
+                                        onclick="selecionarCor(this, 'produto-4'); trocarImagem('produto-4', 'preto')" 
+                                        data-cor="Preto">
                                         <span style="background: #000;"></span> Preto
                                     </button>
-                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-4')"
-                                        data-cor="Vermelho">
-                                        <span style="background: #c00;"></span> Vermelho
+        
+                                    <button class="cor-btn" 
+                                        onclick="selecionarCor(this, 'produto-4'); trocarImagem('produto-4', 'rosa-escuro')" 
+                                        data-cor="Rosa Escuro">
+                                        <span style="background: #8b4513;"></span> Rosa Escuro
                                     </button>
-                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-4')" data-cor="Rosa">
+        
+                                    <button class="cor-btn" 
+                                        onclick="selecionarCor(this, 'produto-4'); trocarImagem('produto-4', 'rosa')" 
+                                        data-cor="Rosa">
                                         <span style="background: #ffb6c1;"></span> Rosa
                                     </button>
+        
                                 </div>
-                                <span class="erro-cor" id="erro-cor-produto-4"
-                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                <span class="erro-cor" id="erro-cor-produto-4" style="display:none; color:#e74c3c; font-size:12px;">
                                     Escolha uma cor!
                                 </span>
                             </div>
@@ -595,7 +618,7 @@ MODAIS (vamos adicionar depois)
 
                             <!-- Botão adicionar com validação -->
                             <button class="btn-adicionar"
-                                onclick="validarEAdicionar('produto-4', 'Conjunto Renda Premium', 69.90)">
+                                onclick="validarEAdicionar('produto-4', 'conjunto em microfibra básico', 69.90)">
                                 Adicionar à Sacola
                             </button>
 
@@ -615,52 +638,64 @@ MODAIS (vamos adicionar depois)
 
                     <div class="produto-detalhes">
                         <!-- Imagem grande -->
-                        <img src="imagens/conjunto-5.jpg" alt="Conjunto Renda Premium">
+                       <img id="img-produto-5" src="imagens/conjunto-5-.jpg" alt="conjunto c/bojo rendado calcinha fio duplo com laços">
 
                         <!-- Informações -->
                         <div class="info-produto">
                             <h2>Conjunto Renda Premium</h2>
                             <p class="preco">R$ 69,90</p>
 
-                            <!-- Seleção de Cor (OBRIGATÓRIO) -->
+                          <!-- Seleção de Cor (OBRIGATÓRIO) - 4 CORES -->
                             <div class="selecao-cor">
                                 <label>Cor: <span class="obrigatorio">*</span></label>
                                 <div class="opcoes-cor" id="cor-produto-5">
-                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-5')" data-cor="Preto">
-                                        <span style="background: #000;"></span> Preto
+
+                                    <button class="cor-btn ativa" 
+                                            onclick="selecionarCor(this, 'produto-5'); trocarImagem('produto-5', 'fucsia')" 
+                                            data-cor="Fúcsia">
+                                        <span style="background: #ff0066;"></span> Fúcsia
                                     </button>
-                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-5')"
-                                        data-cor="Vermelho">
-                                        <span style="background: #c00;"></span> Vermelho
+
+                                    <button class="cor-btn" 
+                                            onclick="selecionarCor(this, 'produto-5'); trocarImagem('produto-5', 'rosa-claro')" 
+                                            data-cor="Rosa Claro">
+                                        <span style="background: #ffb6c1;"></span> Rosa Claro
                                     </button>
-                                    <button class="cor-btn" onclick="selecionarCor(this, 'produto-5')" data-cor="Rosa">
-                                        <span style="background: #ffb6c1;"></span> Rosa
+
+                                    <button class="cor-btn" 
+                                            onclick="selecionarCor(this, 'produto-5'); trocarImagem('produto-5', 'rosa')" 
+                                            data-cor="Rosa">
+                                        <span style="background: #ff69b4;"></span> Rosa
                                     </button>
+
+                                    <button class="cor-btn" 
+                                            onclick="selecionarCor(this, 'produto-5'); trocarImagem('produto-5', 'azul')" 
+                                            data-cor="Azul">
+                                        <span style="background: #2196f3;"></span> Azul
+                                    </button>
+
                                 </div>
-                                <span class="erro-cor" id="erro-cor-produto-5"
-                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                <span class="erro-cor" id="erro-cor-produto-5" style="display:none; color:#e74c3c; font-size:12px;">
                                     Escolha uma cor!
                                 </span>
                             </div>
 
-                            <!-- Seleção de Tamanho (OBRIGATÓRIO) -->
+                           <!-- Seleção de Tamanho (OBRIGATÓRIO) -->
                             <div class="selecao-tamanho">
                                 <label>Tamanho: <span class="obrigatorio">*</span></label>
                                 <div class="opcoes-tamanho" id="tamanho-produto-5">
-                                    <button onclick="selecionarTamanho(this, 'produto-5')" data-tamanho="P">P</button>
                                     <button onclick="selecionarTamanho(this, 'produto-5')" data-tamanho="M">M</button>
-                                    <button onclick="selecionarTamanho(this, 'produto-5')" data-tamanho="G">G</button>
+                                    <button class="ativa" onclick="selecionarTamanho(this, 'produto-5')" data-tamanho="G">G</button>
                                     <button onclick="selecionarTamanho(this, 'produto-5')" data-tamanho="GG">GG</button>
                                 </div>
-                                <span class="erro-tamanho" id="erro-tamanho-produto-5"
-                                    style="display:none; color:#e74c3c; font-size:12px;">
+                                <span class="erro-tamanho" id="erro-tamanho-produto-5" style="display:none; color:#e74c3c; font-size:12px;">
                                     Escolha um tamanho!
                                 </span>
                             </div>
 
                             <!-- Botão adicionar com validação -->
                             <button class="btn-adicionar"
-                                onclick="validarEAdicionar('produto-5', 'Conjunto Renda Premium', 69.90)">
+                                onclick="validarEAdicionar('produto-5', 'conjunto c/bojo rendado calcinha fio duplo com laços', 69.90)">
                                 Adicionar à Sacola
                             </button>
 
