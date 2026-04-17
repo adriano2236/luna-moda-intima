@@ -1,19 +1,3 @@
-// ============================================
-// CARRINHO / SACOLA
-// ============================================
-
-function abrirCarrinho() {
-  document.getElementById("sacola").style.display = "flex";
-}
-
-function fecharCarrinho() {
-  document.getElementById("sacola").style.display = "none";
-}
-
-// ============================================
-// CARROSSEL INFINITO (loop suave)
-// ============================================
-
 let slideIndex = 0;
 const container = document.querySelector(".carrossel-container");
 const slides = document.querySelectorAll(".slide");
@@ -78,24 +62,6 @@ if (document.querySelector('.carrossel')) {
 }
 
 // ============================================
-// MODAIS - CATEGORIAS E PRODUTOS
-// ============================================
-
-function abrirModalCategoria(id) {
-  document.getElementById(id).style.display = "flex";
-}
-
-function abrirModalProduto(id) {
-  // Removemos a lógica de fechar outros modais aqui.
-  // Cada modal agora abrirá independentemente.
-  document.getElementById(id).style.display = "flex";
-}
-
-function fecharModal(id) {
-  document.getElementById(id).style.display = "none";
-}
-
-// ============================================
 // TROCAR IMAGEM DO PRODUTO PELA COR
 // ============================================
 
@@ -137,80 +103,3 @@ function selecionarTamanho(botao) {
   // Adiciona ativa no clicado
   botao.classList.add("ativa");
 }
-
-// ============================================
-// ADICIONAR AO CARRINHO (unificado)
-// ============================================
-
-let contadorCarrinho = 0; // mantém o contador global
-
-// ============================================
-// VALIDAR E ADICIONAR AO CARRINHO (OBRIGATÓRIO)
-// ============================================
-
-function adicionarCarrinho(produtoId, nome, preco) {
-  // Verifica cor selecionada
-  const corSelecionada = document.querySelector(
-    `#cor-${produtoId} .cor-btn.ativa`,
-  );
-  if (!corSelecionada) {
-    document.getElementById(`erro-cor-${produtoId}`).style.display = "inline";
-    return; // para aqui, não adiciona
-  }
-  document.getElementById(`erro-cor-${produtoId}`).style.display = "none";
-
-  // Verifica tamanho selecionado
-  const tamanhoSelecionado = document.querySelector(
-    `#tamanho-${produtoId} button.ativa`,
-  );
-  if (!tamanhoSelecionado) {
-    document.getElementById(`erro-tamanho-${produtoId}`).style.display =
-      "inline";
-    return; // para aqui, não adiciona
-  }
-  document.getElementById(`erro-tamanho-${produtoId}`).style.display = "none";
-
-  // Pega valores
-  const cor = corSelecionada.getAttribute("data-cor");
-  const tamanho = tamanhoSelecionado.getAttribute("data-tamanho");
-
-  // Atualiza contador
-  contadorCarrinho++;
-  document.getElementById("contador-carrinho").textContent = contadorCarrinho;
-
-  // Mensagem
-  alert(
-    `✅ Adicionado!\n\n${nome}\nCor: ${cor}\nTamanho: ${tamanho}\nPreço: R$ ${preco.toFixed(2)}`,
-  );
-
-  // Fecha modal
-  fecharModal(`modal-${produtoId}`);
-}
-// ============================================
-// FECHAR AO CLICAR FORA (único para todos)
-// ============================================
-
-window.onclick = function (event) {
-  // Fecha sacola se o clique foi diretamente nela
-  const sacola = document.getElementById("sacola");
-  if (event.target === sacola) {
-    sacola.style.display = "none";
-  }
-
-  // Fecha modais de produto individuais
-  const modaisProduto = document.querySelectorAll(".modal-produto");
-  modaisProduto.forEach((modal) => {
-    // Verifica se o clique foi diretamente no overlay do modal
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  });
-
-  // Fecha modais de categoria individuais (se houver)
-  const modaisCategoria = document.querySelectorAll(".modal-categoria");
-  modaisCategoria.forEach((modal) => {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  });
-};
