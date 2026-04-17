@@ -31,25 +31,7 @@
       <p class="subtitulo">DESEJO ÍNTIMO</p>
     </div>
 
-    <div class="faixa-direita">
-      <button class="btn-carrinho" onclick="abrirCarrinho()">
-        <i class="fas fa-shopping-bag"></i>
-        <span id="contador-carrinho">0</span>
-      </button>
-    </div>
   </header>
-
-  <!-- Modal da sacola -->
-  <div id="sacola" class="modal modal-sacola">
-    <div class="modal-conteudo">
-      <h2>Sua Sacola</h2>
-      <ul id="lista-produtos">
-        <li>Produto 1</li>
-        <li>Produto 2</li>
-      </ul>
-      <button onclick="fecharCarrinho()">Fechar</button>
-    </div>
-  </div>
 
   <!-- Faixa de categorias -->
   <nav class="faixa-categorias">
@@ -94,48 +76,211 @@
       </div>
     </section>
 
-    <!-- SEÇÃO DE CATEGORIAS -->
-    <section class="categorias-grid">
+    <section id="calcinhas" class="secao-produtos">
 
-      <!-- Card Categoria: Conjuntos -->
-      <a href="conjuntos.html" class="card-categoria-link">
-        <article class="card-categoria">
-          <div class="categoria-img">
-            <img src="imagens/categoria-conjuntos.jpg" alt="Conjuntos">
-          </div>
-          <h2>Conjuntos</h2>
-          <p>Ver coleção</p>
-        </article>
+  <h2 class="titulo-secao">Calcinhas</h2>
+
+  <p class="aviso-produtos">
+    Trabalhamos com produtos similares. Consulte cores e disponibilidade no WhatsApp.
+  </p>
+
+  <div class="grid-produtos">
+
+    <!-- PRODUTO 1 -->
+    <div class="card-produto">
+      <img id="img-produto-1" src="imagens/calcinha-1-branco.jpg">
+
+      <h3>Calcinha Renda Premium</h3>
+      <p class="preco">R$ 24,90</p>
+
+      <p class="descricao">
+        Renda delicada, tecido macio e confortável, ideal para o dia a dia.
+      </p>
+
+      <p class="info-extra">
+        Tamanhos: P, M, G
+      </p>
+
+      <div class="opcoes-cor">
+        <span class="cor branco" onclick="trocarImagem('produto-1','branco')"></span>
+        <span class="cor vermelho" onclick="trocarImagem('produto-1','vermelho')"></span>
+        <span class="cor marinho" onclick="trocarImagem('produto-1','marinho')"></span>
+        <span class="cor rosa" onclick="trocarImagem('produto-1','rosa-bb')"></span>
+        <span class="cor preto" onclick="trocarImagem('produto-1','preto')"></span>
+      </div>
+
+      <a class="btn-whatsapp"
+        href="https://wa.me/5554992361064?text=Tenho%20interesse%20na%20Calcinha%20Renda%20Premium">
+        Comprar pelo WhatsApp
       </a>
+    </div>
 
-      <!-- Card Categoria: Cuecas -->
-      <article class="card-categoria" onclick="abrirModalCategoria('modal-cuecas')">
-        <div class="categoria-img">
-          <img src="imagens/categoria-cuecas.jpg" alt="Cuecas">
-        </div>
-        <h2>Cuecas</h2>
-        <p>Ver coleção</p>
-      </article>
+    <!-- PRODUTO 2 -->
+    <div class="card-produto">
+      <img id="img-produto-2" src="imagens/calcinha-2-branco.jpg">
+      <h3>Calcinha Fio Duplo</h3>
+      <p class="preco">R$ 22,90</p>
+      <p class="descricao">
+        Modelo fio duplo com renda, não marca na roupa.
+      </p>
+      <p class="info-extra">Tamanhos: P, M, G</p>
 
-      <!-- Card Categoria: Sutiãs -->
-      <article class="card-categoria" onclick="abrirModalCategoria('modal-sutias')">
-        <div class="categoria-img">
-          <img src="imagens/categoria-sutias.jpg" alt="Sutiãs">
-        </div>
-        <h2>Sutiãs</h2>
-        <p>Ver coleção</p>
-      </article>
+      <div class="opcoes-cor">
+        <button onclick="trocarImagem('produto-2','branco')">Branco</button>
+        <button onclick="trocarImagem('produto-2','vermelho')">Vermelho</button>
+        <button onclick="trocarImagem('produto-2','marinho')">Marinho</button>
+        <button onclick="trocarImagem('produto-2','rosa')">Rosa BB</button>
+        <button onclick="trocarImagem('produto-2','preto')">Preto</button>
+      </div>
 
-      <!-- Card Categoria: Calcinhas -->
-      <article class="card-categoria" onclick="abrirModalCategoria('modal-calcinhas')">
-        <div class="categoria-img">
-          <img src="imagens/categoria-calcinhas.jpg" alt="Calcinhas">
-        </div>
-        <h2>Calcinhas</h2>
-        <p>Ver coleção</p>
-      </article>
+      <a class="btn-whatsapp"
+        href="https://wa.me/5554992361064?text=Tenho%20interesse%20na%20Calcinha%20Fio%20Duplo">
+        Comprar pelo WhatsApp
+      </a>
+    </div>
 
-    </section>
+     <div class="card-produto">
+      <img id="img-produto-3" src="imagens/calcinha-3-branco.jpg">
+      <h3>Calcinha Fio Duplo</h3>
+      <p class="preco">R$ 22,90</p>
+      <p class="descricao">
+        Modelo fio duplo com renda, não marca na roupa.
+      </p>
+      <p class="info-extra">Tamanhos: P, M, G</p>
+
+      <div class="opcoes-cor">
+        <button onclick="trocarImagem('produto-3','vermelho')">Vermelho</button>
+        <button onclick="trocarImagem('produto-3','marinho')">Marinho</button>
+        <button onclick="trocarImagem('produto-3','rosa')">Rosa BB</button>
+        <button onclick="trocarImagem('produto-3','branco')">Branco</button>
+        <button onclick="trocarImagem('produto-3','preto')">Preto</button>
+      </div>
+
+      <a class="btn-whatsapp"
+        href="https://wa.me/5554992361064?text=Tenho%20interesse%20na%20Calcinha%20Fio%20Duplo">
+        Comprar pelo WhatsApp
+      </a>
+    </div>
+
+     <div class="card-produto">
+      <img id="img-produto-4" src="imagens/calcinha-4-branco.jpg">
+      <h3>Calcinha Fio Duplo</h3>
+      <p class="preco">R$ 22,90</p>
+      <p class="descricao">
+        Modelo fio duplo com renda, não marca na roupa.
+      </p>
+      <p class="info-extra">Tamanhos: P, M, G</p>
+
+      <div class="opcoes-cor">
+        <button onclick="trocarImagem('produto-4','branco')">Branco</button>
+        <button onclick="trocarImagem('produto-4','vermelho')">Vermelho</button>
+        <button onclick="trocarImagem('produto-4','marinho')">Marinho</button>
+        <button onclick="trocarImagem('produto-4','rosa')">Rosa BB</button>
+        <button onclick="trocarImagem('produto-4','preto')">Preto</button>
+      </div>
+
+      <a class="btn-whatsapp"
+        href="https://wa.me/5554992361064?text=Tenho%20interesse%20na%20Calcinha%20Fio%20Duplo">
+        Comprar pelo WhatsApp
+      </a>
+    </div>
+
+     <div class="card-produto">
+      <img id="img-produto-5" src="imagens/calcinha-5-branco.jpg">
+      <h3>Calcinha Fio Duplo</h3>
+      <p class="preco">R$ 22,90</p>
+      <p class="descricao">
+        Modelo fio duplo com renda, não marca na roupa.
+      </p>
+      <p class="info-extra">Tamanhos: P, M, G</p>
+
+      <div class="opcoes-cor">
+        <button onclick="trocarImagem('produto-5','branco')">Branco</button>
+        <button onclick="trocarImagem('produto-5','vermelho')">Vermelho</button>
+        <button onclick="trocarImagem('produto-5','marinho')">Marinho</button>
+        <button onclick="trocarImagem('produto-5','rosa')">Rosa BB</button>
+        <button onclick="trocarImagem('produto-5','preto')">Preto</button>
+      </div>
+
+      <a class="btn-whatsapp"
+        href="https://wa.me/5554992361064?text=Tenho%20interesse%20na%20Calcinha%20Fio%20Duplo">
+        Comprar pelo WhatsApp
+      </a>
+    </div>
+
+     <div class="card-produto">
+      <img id="img-produto-6" src="imagens/calcinha-6-branco.jpg">
+      <h3>Calcinha Fio Duplo</h3>
+      <p class="preco">R$ 22,90</p>
+      <p class="descricao">
+        Modelo fio duplo com renda, não marca na roupa.
+      </p>
+      <p class="info-extra">Tamanhos: P, M, G</p>
+
+      <div class="opcoes-cor">
+        <button onclick="trocarImagem('produto-6','branco')">Branco</button>
+        <button onclick="trocarImagem('produto-6','vermelho')">Vermelho</button>
+        <button onclick="trocarImagem('produto-6','marinho')">Marinho</button>
+        <button onclick="trocarImagem('produto-6','rosa')">Rosa BB</button>
+        <button onclick="trocarImagem('produto-6','preto')">Preto</button>
+      </div>
+
+      <a class="btn-whatsapp"
+        href="https://wa.me/5554992361064?text=Tenho%20interesse%20na%20Calcinha%20Fio%20Duplo">
+        Comprar pelo WhatsApp
+      </a>
+    </div>
+
+     <div class="card-produto">
+      <img id="img-produto-7" src="imagens/calcinha-7-branco.jpg">
+      <h3>Calcinha Fio Duplo</h3>
+      <p class="preco">R$ 22,90</p>
+      <p class="descricao">
+        Modelo fio duplo com renda, não marca na roupa.
+      </p>
+      <p class="info-extra">Tamanhos: P, M, G</p>
+
+      <div class="opcoes-cor">
+        <button onclick="trocarImagem('produto-7','branco')">Branco</button>
+        <button onclick="trocarImagem('produto-7','vermelho')">Vermelho</button>
+        <button onclick="trocarImagem('produto-7','marinho')">Marinho</button>
+        <button onclick="trocarImagem('produto-7','rosa')">Rosa BB</button>
+        <button onclick="trocarImagem('produto-7','preto')">Preto</button>
+      </div>
+
+      <a class="btn-whatsapp"
+        href="https://wa.me/5554992361064?text=Tenho%20interesse%20na%20Calcinha%20Fio%20Duplo">
+        Comprar pelo WhatsApp
+      </a>
+    </div>
+
+     <div class="card-produto">
+      <img id="img-produto-8" src="imagens/calcinha-8-branco.jpg">
+      <h3>Calcinha Fio Duplo</h3>
+      <p class="preco">R$ 22,90</p>
+      <p class="descricao">
+        Modelo fio duplo com renda, não marca na roupa.
+      </p>
+      <p class="info-extra">Tamanhos: P, M, G</p>
+
+      <div class="opcoes-cor">
+        <button onclick="trocarImagem('produto-8','branco')">Branco</button>
+        <button onclick="trocarImagem('produto-8','vermelho')">Vermelho</button>
+        <button onclick="trocarImagem('produto-8','marinho')">Marinho</button>
+        <button onclick="trocarImagem('produto-8','rosa')">Rosa BB</button>
+        <button onclick="trocarImagem('produto-8','preto')">Preto</button>
+      </div>
+
+      <a class="btn-whatsapp"
+        href="https://wa.me/5554992361064?text=Tenho%20interesse%20na%20Calcinha%20Fio%20Duplo">
+        Comprar pelo WhatsApp
+      </a>
+    </div>
+    
+  </div>
+
+</section>
+
   </main>
 
   <footer class="rodape">
@@ -186,78 +331,6 @@
   <a href="https://wa.me/5599999999999" class="whatsapp-float" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
   </a>
-
-  <!-- Modal Conjuntos (Nível 1) -->
-  <div id="modal-conjuntos" class="modal modal-categoria">
-    <div class="modal-conteudo">
-      <span class="fechar" onclick="fecharModal('modal-conjuntos')">&times;</span>
-      <h2>Conjuntos</h2>
-
-      <!-- Grid de produtos -->
-      <div class="grid-produtos-modal">
-
-        <!-- Card Produto 1 -->
-        <article class="card-produto-mini" onclick="abrirModalProduto('modal-produto-1')">
-          <img src="imagens/conjunto-renda.jpg" alt="Conjunto Renda">
-          <h3>Conjunto Renda</h3>
-          <p class="preco">R$ 69,98</p>
-          <span class="tag-variacoes">2 cores</span>
-        </article>
-
-        <!-- Card Produto 2 -->
-        <article class="card-produto-mini" onclick="abrirModalProduto('modal-produto-2')">
-          <img src="imagens/conjunto-rendado.jpg" alt="Conjunto Rendado">
-          <h3>Conjunto Rendado</h3>
-          <p class="preco">R$ 79,98</p>
-          <span class="tag-variacoes">2 cores</span>
-        </article>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal Produto 1 -->
-  <div id="modal-produto-1" class="modal modal-produto">
-    <div class="modal-conteudo">
-      <span class="fechar" onclick="fecharModal('modal-produto-1')">&times;</span>
-
-      <div class="produto-detalhes">
-        <img src="imagens/conjunto-renda.jpg" alt="Conjunto Renda">
-
-        <div class="info-produto">
-          <h2>Conjunto Renda Calcinha Fio</h2>
-          <p class="preco">R$ 69,98</p>
-
-          <!-- Seleção de Cor -->
-          <div class="selecao-cor">
-            <label>Cor:</label>
-            <div class="opcoes-cor">
-              <button class="cor-btn ativa" onclick="selecionarCor(this)">
-                <span style="background: #ffb6c1;"></span> Rosa Claro
-              </button>
-              <button class="cor-btn" onclick="selecionarCor(this)">
-                <span style="background: #ff0066;"></span> Fúcsia
-              </button>
-            </div>
-          </div>
-
-          <!-- Seleção de Tamanho -->
-          <div class="selecao-tamanho">
-            <label>Tamanho:</label>
-            <div class="opcoes-tamanho">
-              <button onclick="selecionarTamanho(this)">P</button>
-              <button class="ativa" onclick="selecionarTamanho(this)">M</button>
-              <button onclick="selecionarTamanho(this)">G</button>
-            </div>
-          </div>
-
-          <button class="btn-adicionar" onclick="adicionarCarrinho('Conjunto Renda', 'rosa', 'M')">
-            Adicionar à Sacola
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <script src="script.js"></script>
 
